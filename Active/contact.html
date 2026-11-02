@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Kontak & Maps - Pertamina Hulu Energi</title>
+  <meta name="description" content="Kontak resmi dan lokasi kantor pusat PT Pertamina Hulu Energi (PHE).">
+
+  <link href="assets/img/logok.png" rel="icon">
+  <link href="assets/img/logok.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --pertamina-red: #D71920;
+      --pertamina-blue: #0073B2;
+      --pertamina-green: #00A651;
+      --pertamina-dark: #1a1a1a;
+      --pertamina-gray: #f5f5f5;
+    }
+    body { font-family: 'Roboto', sans-serif; color: #333; }
+
+    /* --- STYLE HEADER & LOGO (DIPERBESAR) --- */
+    .header {
+      background-color: var(--pertamina-red) !important;
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      padding: 12px 0;
+    }
+    .header .logo img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+      margin-right: 15px; 
+    }
+    .header .sitename { 
+      color: #fff !important; 
+      font-weight: 700; 
+      font-size: 1.5rem; 
+      letter-spacing: 0.5px; 
+      margin: 0; 
+      display: flex;
+      align-items: center;
+    }
+    .header .navmenu a { color: #fff !important; font-weight: 500; font-size: 0.95rem; padding: 8px 12px; }
+    .header .navmenu a:hover, .header .navmenu .active { color: #ffd700 !important; }
+    .header .mobile-nav-toggle { color: #fff; font-size: 1.5rem; }
+
+    .page-title {
+      background: linear-gradient(105deg, rgba(215,25,32,0.95) 0%, rgba(176,21,27,0.95) 100%),
+                  url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: #fff;
+      padding: 100px 0 70px;
+    }
+    .page-title h1 { color: #fff; font-weight: 700; font-size: 2.6rem; margin-bottom: 10px; }
+    .page-title .breadcrumbs ol { list-style: none; padding: 0; margin: 0; display: flex; gap: 8px; flex-wrap: wrap; font-size: 0.9rem; }
+    .page-title .breadcrumbs ol li a { color: #ffe4e6; text-decoration: none; }
+    .page-title .breadcrumbs ol li a:hover { color: #fff; }
+    .page-title .breadcrumbs ol li.current { color: #fff; font-weight: 600; }
+    .page-title .breadcrumbs ol li + li::before { content: "/"; color: rgba(255,255,255,0.6); margin-right: 8px; }
+
+    .section { padding: 70px 0; }
+    .section-title { text-align: center; margin-bottom: 45px; }
+    .section-title p { color: var(--pertamina-red); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 6px; }
+    .section-title h2 { font-weight: 700; color: var(--pertamina-dark); font-size: 2rem; }
+
+    .btn-detail {
+      background: var(--pertamina-red) !important; border-color: var(--pertamina-red) !important;
+      color: #fff !important; padding: 12px 30px; border-radius: 6px; font-weight: 600;
+      text-decoration: none; display: inline-block; transition: 0.3s;
+    }
+    .btn-detail:hover { background: #b0151b !important; border-color: #b0151b !important; color: #fff !important; }
+
+    /* Info Cards */
+    .contact-info-card {
+      background: #fff; border-radius: 14px; padding: 30px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      border-left: 5px solid var(--pertamina-red);
+      height: 100%;
+      transition: 0.3s;
+    }
+    .contact-info-card:hover { transform: translateY(-4px); box-shadow: 0 12px 35px rgba(0,0,0,0.1); }
+    .contact-info-card .icon-circle {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(215,25,32,0.1);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .contact-info-card .icon-circle i { font-size: 1.4rem; color: var(--pertamina-red); }
+    .contact-info-card h5 { font-size: 1.05rem; font-weight: 700; color: var(--pertamina-dark); margin-bottom: 8px; }
+    .contact-info-card p { font-size: 0.92rem; color: #555; margin: 0; line-height: 1.7; }
+    .contact-info-card a { color: var(--pertamina-blue); text-decoration: none; }
+    .contact-info-card a:hover { text-decoration: underline; }
+
+    /* Form */
+    .contact-form-wrap {
+      background: #fff; border-radius: 14px; padding: 40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      border-top: 5px solid var(--pertamina-red);
+    }
+    .contact-form-wrap h3 { font-weight: 700; color: var(--pertamina-dark); margin-bottom: 8px; }
+    .contact-form-wrap .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 25px; }
+    .contact-form-wrap .form-control {
+      border-radius: 6px; padding: 12px 15px;
+      border: 1px solid #ddd; font-size: 0.95rem;
+    }
+    .contact-form-wrap .form-control:focus {
+      border-color: var(--pertamina-red);
+      box-shadow: 0 0 0 3px rgba(215,25,32,0.1);
+    }
+    .contact-form-wrap .btn-submit {
+      background: var(--pertamina-red); border: none; color: #fff;
+      padding: 13px 35px; border-radius: 6px; font-weight: 600;
+      transition: 0.3s;
+    }
+    .contact-form-wrap .btn-submit:hover { background: #b0151b; }
+    .contact-form-wrap .btn-submit:disabled { background: #999; }
+
+    /* Maps */
+    .maps-full {
+      border-radius: 14px; overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+      border: 5px solid #fff;
+      line-height: 0;
+    }
+    .maps-full iframe { width: 100%; height: 480px; border: 0; }
+
+    /* Sosmed strip */
+    .sosmed-strip {
+      background: linear-gradient(135deg, var(--pertamina-red), #b0151b);
+      color: #fff; border-radius: 16px; padding: 40px;
+      box-shadow: 0 12px 40px rgba(215,25,32,0.25);
+      text-align: center;
+    }
+    .sosmed-strip h3 { font-weight: 700; margin-bottom: 10px; }
+    .sosmed-strip p { opacity: 0.95; margin-bottom: 22px; }
+    .sosmed-strip .sosmed-links {
+      display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;
+    }
+    .sosmed-strip .sosmed-links a {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.3rem; text-decoration: none;
+      transition: 0.3s;
+    }
+    .sosmed-strip .sosmed-links a:hover {
+      background: #fff; color: var(--pertamina-red);
+    }
+
+    /* FOOTER DARK MODE */
+    .footer {
+      background-color: #2b2b2b !important;
+      border-top: 4px solid var(--pertamina-red);
+      padding-top: 50px;
+      color: #e0e0e0;
+    }
+    .footer .widget-heading { color: #ffffff !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 16px; }
+    .footer a, .footer .widget ul li a { color: #b0b0b0 !important; text-decoration: none; }
+    .footer a:hover, .footer .widget ul li a:hover { color: #ffffff !important; }
+    .footer .social-icons a span { color: #ffffff; }
+    .footer .social-icons a:hover span { color: var(--pertamina-red); }
+    .footer .copyright { border-top: 1px solid #444444; margin-top: 30px; padding: 20px 0; font-size: 0.85rem; }
+    
+    /* PERBAIKAN WARNA TANGGAL FOOTER */
+    .footer .widget .footer-blog-entry .date {
+      color: #888 !important; 
+    }
+
+    @media (max-width: 768px) {
+      .page-title h1 { font-size: 2rem; }
+      .page-title { padding: 80px 0 55px; }
+      .section { padding: 55px 0; }
+      .contact-form-wrap, .sosmed-strip { padding: 28px; }
+      .maps-full iframe { height: 320px; }
+      .header .logo img { height: 45px; }
+      .header .sitename { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logok.png" alt="Logo Pertamina">
+        <h1 class="sitename">Pertamina Hulu Energi</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+          <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
+          <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
+          <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur Organisasi</a></li>
+          <li><a href="berita.html" data-i18n="nav.berita">Berita</a></li>
+          <li><a href="contact.html" class="active" data-i18n="nav.kontak">Kontak & Maps</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="id" title="Bahasa Indonesia">ID</button>
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title">
+      <div class="container">
+        <h1 data-i18n="contact.page.title">Kontak & Maps</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+            <li class="current" data-i18n="contact.breadcrumb">Kontak & Maps</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Info Kontak -->
+    <section class="section">
+      <div class="container section-title" data-aos="fade-up">
+        <p data-i18n="contact.info.tag">Hubungi Kami</p>
+        <h2 data-i18n="contact.info.title">Informasi Kontak</h2>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up">
+            <div class="contact-info-card">
+              <div class="icon-circle"><i class="bi bi-geo-alt-fill"></i></div>
+              <h5 data-i18n="contact.kantor.title">Kantor Pusat</h5>
+              <p data-i18n="contact.kantor.desc">
+                PHE Tower<br>
+                Jl. TB Simatupang Kav. 99<br>
+                Jakarta Selatan 12520, Indonesia
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-info-card">
+              <div class="icon-circle"><i class="bi bi-whatsapp"></i></div>
+              <h5 data-i18n="contact.telp.title">Telepon / WhatsApp</h5>
+              <p>
+                <a href="https://wa.me/6281280179664" target="_blank">
+                  <i class="bi bi-whatsapp me-1"></i> +62 812 8017 9664
+                </a><br>
+                <small class="text-muted" data-i18n="contact.telp.note">Senin – Jumat, 08.00 – 17.00 WIB</small>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-info-card">
+              <div class="icon-circle"><i class="bi bi-envelope-fill"></i></div>
+              <h5 data-i18n="contact.email.title">Email</h5>
+              <p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pcc135@pertamina.com&su=Pertanyaan%20Website%20PHE&body=Halo%20PHE%2C%20saya%20ingin%20bertanya%20mengenai..." target="_blank">
+                  <i class="bi bi-envelope-paper me-1"></i> pcc135@pertamina.com
+                </a><br>
+                <small class="text-muted" data-i18n="contact.email.note">Klik untuk kirim pesan via Gmail</small>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="contact-info-card">
+              <div class="icon-circle"><i class="bi bi-globe"></i></div>
+              <h5 data-i18n="contact.web.title">Website</h5>
+              <p>
+                <a href="https://phe.pertamina.com" target="_blank" rel="noopener">phe.pertamina.com</a><br>
+                <small class="text-muted" data-i18n="contact.web.note">Situs resmi PHE</small>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Form + Maps -->
+    <section class="section" style="background:#f9f9f9;">
+      <div class="container">
+        <div class="row gy-5 align-items-stretch">
+
+          <div class="col-lg-5" data-aos="fade-up">
+            <div class="contact-form-wrap h-100">
+              <h3 data-i18n="contact.form.title">Kirim Pesan</h3>
+              <p class="subtitle" data-i18n="contact.form.desc">Isi formulir di bawah ini, kami akan menghubungi Anda kembali.</p>
+              
+              <!-- FORM WEB3FORMS -->
+              <form id="contact-form">
+                <input type="hidden" name="access_key" value="50f64240-154f-4c63-870d-1f36e1065d40">
+                
+                <input type="hidden" name="subject" value="Pesan Baru dari Website PHE">
+                
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <div class="mb-3">
+                  <input type="text" name="name" class="form-control" placeholder="Nama Lengkap" data-i18n-placeholder="contact.form.name" required>
+                </div>
+                <div class="mb-3">
+                  <input type="email" name="email" class="form-control" placeholder="Alamat Email" data-i18n-placeholder="contact.form.email" required>
+                </div>
+                <div class="mb-3">
+                  <input type="text" name="subjek_pesan" class="form-control" placeholder="Subjek" data-i18n-placeholder="contact.form.subject" required>
+                </div>
+                <div class="mb-3">
+                  <textarea name="message" class="form-control" rows="4" placeholder="Pesan Anda" data-i18n-placeholder="contact.form.message" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit" id="submit-btn">
+                  <span data-i18n="contact.form.btn">Kirim Pesan</span> <i class="bi bi-send ms-1"></i>
+                </button>
+
+                <div id="form-result" class="mt-3" style="display: none;"></div>
+              </form>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <div class="maps-full h-100">
+              <iframe
+                src="https://www.google.com/maps?q=PHE+Tower+Jl.+TB+Simatupang+Kav.+99+Jakarta&output=embed"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Lokasi PHE Tower">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sosmed -->
+    <section class="section">
+      <div class="container">
+        <div class="sosmed-strip" data-aos="fade-up">
+          <h3 data-i18n="contact.sosmed.title">Terhubung dengan Kami</h3>
+          <p data-i18n="contact.sosmed.desc">Ikuti kanal resmi PHE untuk mendapatkan informasi terkini.</p>
+          <div class="sosmed-links">
+            <a href="https://www.facebook.com/pertamina" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com/pertamina" target="_blank" title="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.linkedin.com/company/phepertamina/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/phe.pertamina/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/@pertamina" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.brand">Pertamina Hulu Energi</h3>
+            <p class="mb-4" style="font-size:0.9rem;" data-i18n="footer.desc">Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.</p>
+            <p class="mb-0"><a href="about.html" class="btn-outline-detail" style="padding:8px 20px;font-size:0.85rem; border-color: #fff; color: #fff;" data-i18n="footer.selengkapnya">Selengkapnya</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.nav">Navigasi</h3>
+            <div class="row" style="font-size:0.9rem;">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+                  <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
+                  <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur Organisasi</a></li>
+                  <li><a href="berita.html" data-i18n="nav.berita">Berita</a></li>
+                  <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Maps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.berita">Berita Terbaru</h3>
+            <ul class="list-unstyled footer-blog-entry" style="font-size:0.9rem;">
+              <!-- HANYA MENYISAKAN SATU BERITA -->
+              <li><span class="d-block date">31 Okt 2026</span><a href="berita.html" data-i18n="footer.berita1">PHE Tingkatkan Produksi</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.terhubung">Terhubung</h3>
+            <ul class="list-unstyled social-icons light mb-3">
+              <li><a href="https://www.facebook.com/pertamina" target="_blank" rel="noopener" title="Facebook"><span class="bi bi-facebook"></span></a></li>
+              <li><a href="https://twitter.com/pertamina" target="_blank" rel="noopener" title="Twitter/X"><span class="bi bi-twitter-x"></span></a></li>
+              <li><a href="https://www.linkedin.com/company/phepertamina/" target="_blank" rel="noopener" title="LinkedIn"><span class="bi bi-linkedin"></span></a></li>
+              <li><a href="https://www.instagram.com/phe.pertamina/" target="_blank" rel="noopener" title="Instagram"><span class="bi bi-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename text-white">Pertamina Hulu Energi</strong> <span data-i18n="footer.copyright">Seluruh Hak Cipta Dilindungi</span></p>
+        <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Dimodifikasi untuk PHE</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+  const translations = {
+    id: {
+      "nav.beranda":"Beranda","nav.tentang":"Tentang Kami","nav.sejarah":"Sejarah","nav.struktur":"Struktur Organisasi","nav.berita":"Berita","nav.kontak":"Kontak & Maps",
+      "contact.page.title":"Kontak & Maps","contact.breadcrumb":"Kontak & Maps",
+      "contact.info.tag":"Hubungi Kami","contact.info.title":"Informasi Kontak",
+      "contact.kantor.title":"Kantor Pusat","contact.kantor.desc":"PHE Tower<br>Jl. TB Simatupang Kav. 99<br>Jakarta Selatan 12520, Indonesia",
+      "contact.telp.title":"Telepon / WhatsApp","contact.telp.note":"Senin – Jumat, 08.00 – 17.00 WIB",
+      "contact.email.title":"Email","contact.email.note":"Klik untuk kirim pesan via Gmail",
+      "contact.web.title":"Website","contact.web.note":"Situs resmi PHE",
+      "contact.form.title":"Kirim Pesan","contact.form.desc":"Isi formulir di bawah ini, kami akan menghubungi Anda kembali.",
+      "contact.form.name":"Nama Lengkap","contact.form.email":"Alamat Email","contact.form.subject":"Subjek","contact.form.message":"Pesan Anda","contact.form.success":"Pesan Anda telah terkirim. Terima kasih!","contact.form.btn":"Kirim Pesan",
+      "contact.sosmed.title":"Terhubung dengan Kami","contact.sosmed.desc":"Ikuti kanal resmi PHE untuk mendapatkan informasi terkini.",
+      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.","footer.selengkapnya":"Selengkapnya","footer.nav":"Navigasi","footer.berita":"Berita Terbaru","footer.terhubung":"Terhubung","footer.copyright":"Seluruh Hak Cipta Dilindungi","footer.berita1":"PHE Tingkatkan Produksi"
+    },
+    en: {
+      "nav.beranda":"Home","nav.tentang":"About Us","nav.sejarah":"History","nav.struktur":"Organization Structure","nav.berita":"News","nav.kontak":"Contact & Maps",
+      "contact.page.title":"Contact & Maps","contact.breadcrumb":"Contact & Maps",
+      "contact.info.tag":"Contact Us","contact.info.title":"Contact Information",
+      "contact.kantor.title":"Head Office","contact.kantor.desc":"PHE Tower<br>Jl. TB Simatupang Kav. 99<br>South Jakarta 12520, Indonesia",
+      "contact.telp.title":"Phone / WhatsApp","contact.telp.note":"Monday – Friday, 08.00 – 17.00 WIB",
+      "contact.email.title":"Email","contact.email.note":"Click to send a message via Gmail",
+      "contact.web.title":"Website","contact.web.note":"PHE Official Website",
+      "contact.form.title":"Send a Message","contact.form.desc":"Fill out the form below, we will get back to you.",
+      "contact.form.name":"Full Name","contact.form.email":"Email Address","contact.form.subject":"Subject","contact.form.message":"Your Message","contact.form.success":"Your message has been sent. Thank you!","contact.form.btn":"Send Message",
+      "contact.sosmed.title":"Connect with Us","contact.sosmed.desc":"Follow PHE's official channels for the latest information.",
+      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Pertamina's Upstream Subholding. Safeguarding national energy resilience.","footer.selengkapnya":"Learn More","footer.nav":"Navigation","footer.berita":"Latest News","footer.terhubung":"Connect","footer.copyright":"All Rights Reserved","footer.berita1":"PHE Boosts Production"
+    }
+  };
+
+  let currentLang = localStorage.getItem('phe-lang') || 'id';
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('phe-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const tr = translations[lang] && translations[lang][key];
+      if (tr !== undefined) el.innerHTML = tr;
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const tr = translations[lang] && translations[lang][key];
+      if (tr !== undefined) el.setAttribute('placeholder', tr);
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    applyLanguage(currentLang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        applyLanguage(btn.dataset.lang);
+      });
+    });
+
+    // --- LOGIKA PENGIRIMAN EMAIL OTOMATIS (WEB3FORMS) ---
+    const form = document.getElementById('contact-form');
+    const result = document.getElementById('form-result');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Mencegah reload halaman
+
+      // Ubah tombol jadi loading
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Mengirim... <i class="bi bi-hourglass-split ms-1"></i>';
+
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          },
+          body: json
+      })
+      .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+              // Jika sukses
+              result.style.display = 'block';
+              result.innerHTML = '<div class="alert alert-success fw-bold"><i class="bi bi-check-circle me-2"></i>Pesan berhasil dikirim! Terima kasih.</div>';
+              form.reset();
+          } else {
+              // Jika gagal dari server
+              console.log(response);
+              result.style.display = 'block';
+              result.innerHTML = `<div class="alert alert-danger">Error: ${json.message}</div>`;
+          }
+      })
+      .catch(error => {
+          // Jika gagal koneksi internet
+          console.log(error);
+          result.style.display = 'block';
+          result.innerHTML = '<div class="alert alert-danger">Terjadi kesalahan sistem. Coba lagi nanti.</div>';
+      })
+      .finally(() => {
+          // Kembalikan tombol ke semula
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span data-i18n="contact.form.btn">Kirim Pesan</span> <i class="bi bi-send ms-1"></i>';
+      });
+    });
+  });
+  </script>
+
+</body>
+</html>

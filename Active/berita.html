@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Berita - Pertamina Hulu Energi</title>
+  <meta name="description" content="Berita terbaru seputar PT Pertamina Hulu Energi (PHE).">
+
+  <link href="assets/img/logok.png" rel="icon">
+  <link href="assets/img/logok.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --pertamina-red: #D71920;
+      --pertamina-blue: #0073B2;
+      --pertamina-green: #00A651;
+      --pertamina-dark: #1a1a1a;
+      --pertamina-gray: #f5f5f5;
+    }
+    body { font-family: 'Roboto', sans-serif; color: #333; }
+
+    .header {
+      background-color: var(--pertamina-red) !important;
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      padding: 12px 0;
+    }
+    .header .logo img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+      margin-right: 15px; 
+    }
+    .header .sitename { 
+      color: #fff !important; 
+      font-weight: 700; 
+      font-size: 1.5rem; 
+      letter-spacing: 0.5px; 
+      margin: 0; 
+      display: flex;
+      align-items: center;
+    }
+    .header .navmenu a { color: #fff !important; font-weight: 500; font-size: 0.95rem; padding: 8px 12px; }
+    .header .navmenu a:hover, .header .navmenu .active { color: #ffd700 !important; }
+    .header .mobile-nav-toggle { color: #fff; font-size: 1.5rem; }
+
+    .page-title {
+      background: linear-gradient(105deg, rgba(215,25,32,0.95) 0%, rgba(176,21,27,0.95) 100%),
+                  url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: #fff;
+      padding: 100px 0 70px;
+    }
+    .page-title h1 { color: #fff; font-weight: 700; font-size: 2.6rem; margin-bottom: 10px; }
+    .page-title .breadcrumbs ol { list-style: none; padding: 0; margin: 0; display: flex; gap: 8px; flex-wrap: wrap; font-size: 0.9rem; }
+    .page-title .breadcrumbs ol li a { color: #ffe4e6; text-decoration: none; }
+    .page-title .breadcrumbs ol li a:hover { color: #fff; }
+    .page-title .breadcrumbs ol li.current { color: #fff; font-weight: 600; }
+    .page-title .breadcrumbs ol li + li::before { content: "/"; color: rgba(255,255,255,0.6); margin-right: 8px; }
+
+    .section { padding: 70px 0; }
+    .section-title { text-align: center; margin-bottom: 45px; }
+    .section-title p { color: var(--pertamina-red); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 6px; }
+    .section-title h2 { font-weight: 700; color: var(--pertamina-dark); font-size: 2rem; }
+
+    /* KARTU BERITA */
+    .news-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      transition: 0.35s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .news-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
+    
+    .news-img-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+    .news-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+    .news-card:hover .news-img-wrap img { transform: scale(1.05); }
+    
+    .news-category {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: var(--pertamina-red);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .news-body {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .news-date {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .news-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--pertamina-dark);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .news-title a { color: var(--pertamina-dark); text-decoration: none; transition: 0.3s; }
+    .news-title a:hover { color: var(--pertamina-red); }
+    .news-excerpt {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .news-link {
+      display: inline-block;
+      color: var(--pertamina-red);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    .news-link:hover { color: #b0151b; }
+    .news-link i { transition: 0.3s; margin-left: 4px; }
+    .news-link:hover i { transform: translateX(4px); }
+
+    /* FOOTER DARK MODE */
+    .footer {
+      background-color: #2b2b2b !important;
+      border-top: 4px solid var(--pertamina-red);
+      padding-top: 50px;
+      color: #e0e0e0;
+    }
+    .footer .widget-heading { color: #ffffff !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 16px; }
+    .footer a, .footer .widget ul li a { color: #b0b0b0 !important; text-decoration: none; }
+    .footer a:hover, .footer .widget ul li a:hover { color: #ffffff !important; }
+    .footer .social-icons a span { color: #ffffff; }
+    .footer .social-icons a:hover span { color: var(--pertamina-red); }
+    .footer .copyright { border-top: 1px solid #444444; margin-top: 30px; padding: 20px 0; font-size: 0.85rem; }
+    
+    /* PERBAIKAN WARNA TANGGAL FOOTER */
+    .footer .widget .footer-blog-entry .date {
+      color: #888 !important; 
+    }
+
+    @media (max-width: 768px) {
+      .page-title h1 { font-size: 2rem; }
+      .page-title { padding: 80px 0 55px; }
+      .section { padding: 55px 0; }
+      .header .logo img { height: 45px; }
+      .header .sitename { font-size: 1.1rem; }
+      .news-img-wrap { height: 200px; }
+    }
+  </style>
+</head>
+
+<body class="berita-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logok.png" alt="Logo Pertamina">
+        <h1 class="sitename">Pertamina Hulu Energi</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+          <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
+          <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
+          <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur Organisasi</a></li>
+          <li><a href="berita.html" class="active" data-i18n="nav.berita">Berita</a></li>
+          <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Maps</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="id" title="Bahasa Indonesia">ID</button>
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title">
+      <div class="container">
+        <h1 data-i18n="berita.page.title">Berita</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+            <li class="current" data-i18n="berita.breadcrumb">Berita</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container section-title" data-aos="fade-up">
+        <p data-i18n="berita.tag">Informasi Terkini</p>
+        <h2 data-i18n="berita.title">Berita Seputar PHE</h2>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- Berita 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="news-card">
+              <div class="news-img-wrap">
+                <img src="assets/img/berita1.webp" alt="Akuisisi Blok Migas">
+                <span class="news-category" data-i18n="berita.cat.akuisisi">Akuisisi</span>
+              </div>
+              <div class="news-body">
+                <div class="news-date"><i class="bi bi-calendar3"></i> 12 Oktober 2026</div>
+                <h3 class="news-title"><a href="https://phe.pertamina.com/en/media/pertamina-strengthens-its-upstream-oil-and-gas-portfolio-through-the-acquisition-of-enis-participating-interests-in-east-kalimantan-blocks" target="_blank" data-i18n="berita.b1.title">Pertamina Strengthens Its Upstream Oil and Gas Portfolio Through the Acquisition of Eni's Participating Interests in East Kalimantan Blocks</a></h3>
+                <p class="news-excerpt" data-i18n="berita.b1.desc">PT Pertamina Hulu Energi (PHE) has successfully acquired Eni's Participating Interests (PI) in three strategic oil and gas blocks in East Kalimantan: North Ganal, Rapak, and East Sepinggan. PHE now holds a 10% PI in North Ganal and Rapak, and increased its PI in East Sepinggan from 15% to 25%. The transaction strengthens Pertamina's position in a key gas production and deepwater development hub.</p>
+                <a href="https://phe.pertamina.com/en/media/pertamina-strengthens-its-upstream-oil-and-gas-portfolio-through-the-acquisition-of-enis-participating-interests-in-east-kalimantan-blocks" target="_blank" class="news-link" data-i18n="berita.read">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Berita 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="news-card">
+              <div class="news-img-wrap">
+                <img src="assets/img/berita2.webp" alt="Fasilitas Produksi Migas">
+                <span class="news-category" data-i18n="berita.cat.strategi">Strategi</span>
+              </div>
+              <div class="news-body">
+                <div class="news-date"><i class="bi bi-calendar3"></i> 27 Januari 2026</div>
+                <h3 class="news-title"><a href="https://phe.pertamina.com/en/media/pertamina-hulu-energi-fokus-migas-non-konvensional-dan-deepwater-untuk-amankan-pasokan-energi-nasional-jangka-panjang-en" target="_blank" data-i18n="berita.b2.title">Pertamina Hulu Energi Focuses on Unconventional Oil & Gas and Deepwater Development to Secure Long-Term National Energy Supply</a></h3>
+                <p class="news-excerpt" data-i18n="berita.b2.desc">PHE reaffirmed its strategic role in maintaining national energy security by focusing on deepwater project development and unconventional oil and gas (UOG) field development. Mery Luciawaty, Director of Development & Production, stated that PHE serves as the backbone in maintaining national energy security during the transition toward Net Zero Emissions.</p>
+                <a href="https://phe.pertamina.com/en/media/pertamina-hulu-energi-fokus-migas-non-konvensional-dan-deepwater-untuk-amankan-pasokan-energi-nasional-jangka-panjang-en" target="_blank" class="news-link" data-i18n="berita.read">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Berita 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="news-card">
+              <div class="news-img-wrap">
+                <img src="assets/img/berita3.webp" alt="Dekarbonisasi">
+                <span class="news-category" data-i18n="berita.cat.dekarbonisasi">Dekarbonisasi</span>
+              </div>
+              <div class="news-body">
+                <div class="news-date"><i class="bi bi-calendar3"></i> 5 April 2026</div>
+                <h3 class="news-title"><a href="https://phe.pertamina.com/en/news/phe-dorong-ketahanan-energi-dan-dekarbonisasi-melalui-operasi-berkelanjutan" target="_blank" data-i18n="berita.b3.title">PHE Dorong Ketahanan Energi dan Dekarbonisasi Melalui Operasi Berkelanjutan</a></h3>
+                <p class="news-excerpt" data-i18n="berita.b3.desc">Sebagai bagian dari komitmen terhadap aksi iklim, PHE mempercepat berbagai inisiatif dekarbonisasi, termasuk program Zero Routine Flaring dan dukungan target NZE.</p>
+                <a href="https://phe.pertamina.com/en/news/phe-dorong-ketahanan-energi-dan-dekarbonisasi-melalui-operasi-berkelanjutan" target="_blank" class="news-link" data-i18n="berita.read">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Berita 4 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="news-card">
+              <div class="news-img-wrap">
+                <img src="assets/img/berita4.jpeg" alt="Target Produksi">
+                <span class="news-category" data-i18n="berita.cat.produksi">Produksi</span>
+              </div>
+              <div class="news-body">
+                <div class="news-date"><i class="bi bi-calendar3"></i> 10 April 2026</div>
+                <h3 class="news-title"><a href="https://www.antaranews.com/berita/5104384/phe-bidik-produksi-minyak-2026-capai-595-ribu-barel-per-hari" target="_blank" data-i18n="berita.b4.title">PHE Bidik Produksi Minyak 2026 Capai 595 Ribu Barel per Hari</a></h3>
+                <p class="news-excerpt" data-i18n="berita.b4.desc">Sepanjang 2025, PT Pertamina Hulu Energi (PHE) sebagai Subholding Upstream Pertamina berhasil mencatatkan produksi minyak dan gas bumi sebesar 1,03 juta barel setara minyak per hari (MMBOEPD).</p>
+                <a href="https://www.antaranews.com/berita/5104384/phe-bidik-produksi-minyak-2026-capai-595-ribu-barel-per-hari" target="_blank" class="news-link" data-i18n="berita.read">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Berita 5 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="news-card">
+              <div class="news-img-wrap">
+                <img src="assets/img/berita5.jfif" alt="Proyek OO-OX">
+                <span class="news-category" data-i18n="berita.cat.proyek">Proyek</span>
+              </div>
+              <div class="news-body">
+                <div class="news-date"><i class="bi bi-calendar3"></i> 30 Maret 2026</div>
+                <h3 class="news-title"><a href="https://rri.co.id/bisnis/1379558/phe-onwj-selesaikan-fase-kritis-proyek-oo-ox-guna-tingkatkan-produksi-minyak" target="_blank" data-i18n="berita.b5.title">PHE ONWJ Selesaikan Fase Kritis Proyek OO-OX Guna Tingkatkan Produksi Minyak</a></h3>
+                <p class="news-excerpt" data-i18n="berita.b5.desc">Proyek strategis tersebut berpotensi besar menambah produksi harian nasional sebesar 3.000 barel minyak mentah dan gas bumi sebesar 21–22 juta standar kaki kubik.</p>
+                <a href="https://rri.co.id/bisnis/1379558/phe-onwj-selesaikan-fase-kritis-proyek-oo-ox-guna-tingkatkan-produksi-minyak" target="_blank" class="news-link" data-i18n="berita.read">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Berita 6 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="news-card">
+              <div class="news-img-wrap">
+                <img src="assets/img/berita6.jpg" alt="HSSE">
+                <span class="news-category" data-i18n="berita.cat.hsse">HSSE</span>
+              </div>
+              <div class="news-body">
+                <div class="news-date"><i class="bi bi-calendar3"></i> 28 April 2026</div>
+                <h3 class="news-title"><a href="https://phe.pertamina.com/news/perkuat-ketahanan-energi-nasional-phe-dorong-ksot-struktur-dan-area-migas-dengan-standar-hsse-ketat" target="_blank" data-i18n="berita.b6.title">PHE Dorong KSOT Struktur dan Area Migas dengan Standar HSSE Ketat</a></h3>
+                <p class="news-excerpt" data-i18n="berita.b6.desc">PT Pertamina Hulu Energi (PHE) mendorong konsep kerja sama pengelolaan struktur dan area migas dengan standar Health, Safety, Security, and Environment (HSSE) yang ketat.</p>
+                <a href="https://phe.pertamina.com/news/perkuat-ketahanan-energi-nasional-phe-dorong-ksot-struktur-dan-area-migas-dengan-standar-hsse-ketat" target="_blank" class="news-link" data-i18n="berita.read">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.brand">Pertamina Hulu Energi</h3>
+            <p class="mb-4" style="font-size:0.9rem;" data-i18n="footer.desc">Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.</p>
+            <p class="mb-0"><a href="about.html" class="btn-outline-detail" style="padding:8px 20px;font-size:0.85rem; border-color: #fff; color: #fff;" data-i18n="footer.selengkapnya">Selengkapnya</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.nav">Navigasi</h3>
+            <div class="row" style="font-size:0.9rem;">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+                  <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
+                  <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur Organisasi</a></li>
+                  <li><a href="berita.html" data-i18n="nav.berita">Berita</a></li>
+                  <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Maps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.berita">Berita Terbaru</h3>
+            <ul class="list-unstyled footer-blog-entry" style="font-size:0.9rem;">
+              <!-- HANYA 1 BERITA -->
+              <li><span class="d-block date">31 Okt 2026</span><a href="berita.html" data-i18n="footer.berita1">PHE Tingkatkan Produksi</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.terhubung">Terhubung</h3>
+            <ul class="list-unstyled social-icons light mb-3">
+              <li><a href="https://www.facebook.com/pertamina" target="_blank" rel="noopener" title="Facebook"><span class="bi bi-facebook"></span></a></li>
+              <li><a href="https://twitter.com/pertamina" target="_blank" rel="noopener" title="Twitter/X"><span class="bi bi-twitter-x"></span></a></li>
+              <li><a href="https://www.linkedin.com/company/phepertamina/" target="_blank" rel="noopener" title="LinkedIn"><span class="bi bi-linkedin"></span></a></li>
+              <li><a href="https://www.instagram.com/phe.pertamina/" target="_blank" rel="noopener" title="Instagram"><span class="bi bi-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename text-white">Pertamina Hulu Energi</strong> <span data-i18n="footer.copyright">Seluruh Hak Cipta Dilindungi</span></p>
+        <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Dimodifikasi untuk PHE</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+  const translations = {
+    id: {
+      "nav.beranda":"Beranda","nav.tentang":"Tentang Kami","nav.sejarah":"Sejarah","nav.struktur":"Struktur Organisasi","nav.kontak":"Kontak & Maps","nav.berita":"Berita",
+      
+      "berita.page.title":"Berita","berita.breadcrumb":"Berita",
+      "berita.tag":"Informasi Terkini","berita.title":"Berita Seputar PHE",
+      "berita.cat.akuisisi":"Akuisisi","berita.cat.strategi":"Strategi","berita.cat.dekarbonisasi":"Dekarbonisasi","berita.cat.produksi":"Produksi","berita.cat.proyek":"Proyek","berita.cat.hsse":"HSSE",
+      
+      "berita.b1.title":"Pertamina Strengthens Its Upstream Oil and Gas Portfolio Through the Acquisition of Eni's Participating Interests in East Kalimantan Blocks",
+      "berita.b1.desc":"PT Pertamina Hulu Energi (PHE) has successfully acquired Eni's Participating Interests (PI) in three strategic oil and gas blocks in East Kalimantan: North Ganal, Rapak, and East Sepinggan. PHE now holds a 10% PI in North Ganal and Rapak, and increased its PI in East Sepinggan from 15% to 25%. The transaction strengthens Pertamina's position in a key gas production and deepwater development hub.",
+      
+      "berita.b2.title":"Pertamina Hulu Energi Focuses on Unconventional Oil & Gas and Deepwater Development to Secure Long-Term National Energy Supply",
+      "berita.b2.desc":"PHE reaffirmed its strategic role in maintaining national energy security by focusing on deepwater project development and unconventional oil and gas (UOG) field development. Mery Luciawaty, Director of Development & Production, stated that PHE serves as the backbone in maintaining national energy security during the transition toward Net Zero Emissions.",
+      
+      "berita.b3.title":"PHE Dorong Ketahanan Energi dan Dekarbonisasi Melalui Operasi Berkelanjutan",
+      "berita.b3.desc":"Sebagai bagian dari komitmen terhadap aksi iklim, PHE mempercepat berbagai inisiatif dekarbonisasi, termasuk program Zero Routine Flaring dan dukungan target NZE.",
+      
+      "berita.b4.title":"PHE Bidik Produksi Minyak 2026 Capai 595 Ribu Barel per Hari",
+      "berita.b4.desc":"Sepanjang 2025, PT Pertamina Hulu Energi (PHE) sebagai Subholding Upstream Pertamina berhasil mencatatkan produksi minyak dan gas bumi sebesar 1,03 juta barel setara minyak per hari (MMBOEPD).",
+      
+      "berita.b5.title":"PHE ONWJ Selesaikan Fase Kritis Proyek OO-OX Guna Tingkatkan Produksi Minyak",
+      "berita.b5.desc":"Proyek strategis tersebut berpotensi besar menambah produksi harian nasional sebesar 3.000 barel minyak mentah dan gas bumi sebesar 21–22 juta standar kaki kubik.",
+      
+      "berita.b6.title":"PHE Dorong KSOT Struktur dan Area Migas dengan Standar HSSE Ketat",
+      "berita.b6.desc":"PT Pertamina Hulu Energi (PHE) mendorong konsep kerja sama pengelolaan struktur dan area migas dengan standar Health, Safety, Security, and Environment (HSSE) yang ketat.",
+      
+      "berita.read":"Baca Selengkapnya",
+
+      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.","footer.selengkapnya":"Selengkapnya","footer.nav":"Navigasi","footer.berita":"Berita Terbaru","footer.terhubung":"Terhubung","footer.copyright":"Seluruh Hak Cipta Dilindungi","footer.berita1":"PHE Tingkatkan Produksi"
+    },
+    en: {
+      "nav.beranda":"Home","nav.tentang":"About Us","nav.sejarah":"History","nav.struktur":"Organization Structure","nav.kontak":"Contact & Maps","nav.berita":"News",
+      
+      "berita.page.title":"News","berita.breadcrumb":"News",
+      "berita.tag":"Latest Information","berita.title":"PHE News",
+      "berita.cat.akuisisi":"Acquisition","berita.cat.strategi":"Strategy","berita.cat.dekarbonisasi":"Decarbonization","berita.cat.produksi":"Production","berita.cat.proyek":"Project","berita.cat.hsse":"HSSE",
+      
+      "berita.b1.title":"Pertamina Strengthens Its Upstream Oil and Gas Portfolio Through the Acquisition of Eni's Participating Interests in East Kalimantan Blocks",
+      "berita.b1.desc":"PT Pertamina Hulu Energi (PHE) has successfully acquired Eni's Participating Interests (PI) in three strategic oil and gas blocks in East Kalimantan: North Ganal, Rapak, and East Sepinggan. PHE now holds a 10% PI in North Ganal and Rapak, and increased its PI in East Sepinggan from 15% to 25%. The transaction strengthens Pertamina's position in a key gas production and deepwater development hub.",
+      
+      "berita.b2.title":"Pertamina Hulu Energi Focuses on Unconventional Oil & Gas and Deepwater Development to Secure Long-Term National Energy Supply",
+      "berita.b2.desc":"PHE reaffirmed its strategic role in maintaining national energy security by focusing on deepwater project development and unconventional oil and gas (UOG) field development. Mery Luciawaty, Director of Development & Production, stated that PHE serves as the backbone in maintaining national energy security during the transition toward Net Zero Emissions.",
+      
+      "berita.b3.title":"PHE Drives Energy Resilience and Decarbonization Through Sustainable Operations",
+      "berita.b3.desc":"As part of its climate action commitment, PHE is accelerating various decarbonization initiatives, including the Zero Routine Flaring program and NZE target support.",
+      
+      "berita.b4.title":"PHE Targets 2026 Oil Production to Reach 595 Thousand Barrels per Day",
+      "berita.b4.desc":"Throughout 2025, PT Pertamina Hulu Energi (PHE) as Pertamina's Upstream Subholding recorded oil and gas production of 1.03 million barrels of oil equivalent per day (MMBOEPD).",
+      
+      "berita.b5.title":"PHE ONWJ Completes Critical Phase of OO-OX Project to Increase Oil Production",
+      "berita.b5.desc":"The strategic project has great potential to add national daily production of 3,000 barrels of crude oil and 21–22 million standard cubic feet of gas.",
+      
+      "berita.b6.title":"PHE Promotes KSOT of Oil and Gas Structures and Areas with Strict HSSE Standards",
+      "berita.b6.desc":"PT Pertamina Hulu Energi (PHE) encourages the concept of cooperation in managing oil and gas structures and areas with strict Health, Safety, Security, and Environment (HSSE) standards.",
+      
+      "berita.read":"Read More",
+
+      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Pertamina's Upstream Subholding. Safeguarding national energy resilience.","footer.selengkapnya":"Learn More","footer.nav":"Navigation","footer.berita":"Latest News","footer.terhubung":"Connect","footer.copyright":"All Rights Reserved","footer.berita1":"PHE Boosts Production"
+    }
+  };
+
+  let currentLang = localStorage.getItem('phe-lang') || 'id';
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('phe-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const tr = translations[lang] && translations[lang][key];
+      if (tr !== undefined) el.innerHTML = tr;
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    applyLanguage(currentLang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        applyLanguage(btn.dataset.lang);
+      });
+    });
+  });
+  </script>
+
+</body>
+</html>

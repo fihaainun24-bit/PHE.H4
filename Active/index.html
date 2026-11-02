@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pertamina Hulu Energi - Subholding Upstream</title>
+  <meta name="description" content="PT Pertamina Hulu Energi (PHE), Subholding Upstream Pertamina.">
+
+  <!-- FAVICON MENGGUNAKAN FILE LOGOK -->
+  <link href="assets/img/logok.png" rel="icon">
+  <link href="assets/img/logok.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* --- STYLE HEADER & LOGO (DIPERBESAR) --- */
+    .header .logo img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+      margin-right: 15px; 
+    }
+    
+    .header .logo h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+
+    /* --- STYLE HERO SECTION (GAMBAR STATIS) --- */
+    .hero-phe {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(105deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%),
+                  url('assets/img/pertamina.png') center/cover no-repeat;
+      padding: 180px 0 120px; 
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+    
+    .hero-phe::after {
+      display: none; 
+    }
+
+    .hero-phe .container {
+      z-index: 2; 
+    }
+
+    /* --- STYLE FOTO DIREKSI (BERANDA) --- */
+    .direksi-preview .avatar {
+      overflow: hidden;
+    }
+    .direksi-preview .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    
+    /* --- STYLE FOOTER DARK MODE --- */
+    .footer {
+      background-color: #2b2b2b !important;
+      border-top: 4px solid var(--pertamina-red);
+      padding-top: 50px;
+      color: #e0e0e0;
+    }
+    
+    .footer .widget-heading { color: #ffffff !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 16px; }
+    .footer a, .footer .widget ul li a { color: #b0b0b0 !important; text-decoration: none; }
+    .footer a:hover, .footer .widget ul li a:hover { color: #ffffff !important; }
+    .footer .social-icons a span { color: #ffffff; }
+    .footer .social-icons a:hover span { color: var(--pertamina-red); }
+    .footer .copyright { border-top: 1px solid #444444; margin-top: 30px; padding: 20px 0; font-size: 0.85rem; }
+    
+    /* PERBAIKAN WARNA TANGGAL FOOTER */
+    .footer .widget .footer-blog-entry .date {
+      color: #888 !important; 
+    }
+
+    /* --- RESPONSIVE MOBILE --- */
+    @media (max-width: 768px) {
+      .hero-phe { padding: 120px 0 90px; min-height: 60vh; }
+      .header .logo h1 { font-size: 1.1rem; }
+      .header .logo img { height: 45px; }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logok.png" alt="Logo Pertamina">
+        <h1 class="sitename">Pertamina Hulu Energi</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active" data-i18n="nav.beranda">Beranda</a></li>
+          <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
+          <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
+          <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur Organisasi</a></li>
+          <li><a href="berita.html" data-i18n="nav.berita">Berita</a></li>
+          <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Maps</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="id" title="Bahasa Indonesia">ID</button>
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section id="beranda" class="hero-phe">
+      <div class="container position-relative z-2">
+        <h1 data-aos="fade-up" data-i18n="hero.title">Menjaga Ketahanan Energi Nasional</h1>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="hero.desc">
+          PT Pertamina Hulu Energi (PHE) sebagai Subholding Upstream Pertamina mengelola portofolio hulu migas di dalam dan luar negeri.
+        </p>
+        <a href="#tentang-kami" class="btn-hero" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.btn">Jelajahi</a>
+      </div>
+    </section>
+
+    <section id="tentang-kami" class="section">
+      <div class="container section-title" data-aos="fade-up">
+        <p data-i18n="idx.about.tag">Profil Perusahaan</p>
+        <h2 data-i18n="idx.about.title">Tentang Kami</h2>
+      </div>
+
+      <div class="container">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="summary-card">
+              <i class="bi bi-building icon-lg"></i>
+              <h3 data-i18n="idx.about.card">Subholding Upstream Pertamina</h3>
+              <p data-i18n="idx.about.desc">
+                PHE merupakan anak perusahaan PT Pertamina (Persero) yang mengelola 58 anak perusahaan, 6 perusahaan patungan, dan 2 perusahaan afiliasi di sektor hulu migas.
+              </p>
+              <div class="mt-4">
+                <a href="about.html" class="btn-detail" data-i18n="idx.about.btn">Lihat Detail Perusahaan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-3">
+              <div class="col-6"><div class="stat-box"><span class="number purecounter" data-purecounter-start="0" data-purecounter-end="58" data-purecounter-duration="1"></span><span class="label" data-i18n="idx.about.stat1">Anak Perusahaan</span></div></div>
+              <div class="col-6"><div class="stat-box"><span class="number purecounter" data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"></span><span class="label" data-i18n="idx.about.stat2">Perusahaan Patungan</span></div></div>
+              <div class="col-6"><div class="stat-box"><span class="number purecounter" data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1"></span><span class="label" data-i18n="idx.about.stat3">WK Domestik</span></div></div>
+              <div class="col-6"><div class="stat-box"><span class="number purecounter" data-purecounter-start="0" data-purecounter-end="27" data-purecounter-duration="1"></span><span class="label" data-i18n="idx.about.stat4">WK Internasional</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sejarah" class="section" style="background:#f9f9f9;">
+      <div class="container section-title" data-aos="fade-up">
+        <p data-i18n="idx.sejarah.tag">Perjalanan Perusahaan</p>
+        <h2 data-i18n="idx.sejarah.title">Sejarah</h2>
+      </div>
+
+      <div class="container">
+        <div class="mini-timeline" data-aos="fade-up">
+          <div class="mini-step">
+            <div class="dot">1989</div>
+            <h5 data-i18n="idx.sejarah.s1.title">PT Aroma Operations Services</h5>
+            <p data-i18n="idx.sejarah.s1.desc">Berdiri 17 November 1989 untuk mendukung kilang petrokimia Cilacap.</p>
+          </div>
+          <div class="mini-step">
+            <div class="dot">2002</div>
+            <h5 data-i18n="idx.sejarah.s2.title">PT Pertahulu Energy</h5>
+            <p data-i18n="idx.sejarah.s2.desc">Berganti nama seiring pemisahan usaha hulu-hilir Pertamina.</p>
+          </div>
+          <div class="mini-step">
+            <div class="dot">2007</div>
+            <h5 data-i18n="idx.sejarah.s3.title">PT Pertamina Hulu Energi</h5>
+            <p data-i18n="idx.sejarah.s3.desc">Nama resmi PHE disahkan melalui RUPS 29 Juni 2007.</p>
+          </div>
+          <div class="mini-step">
+            <div class="dot">2021</div>
+            <h5 data-i18n="idx.sejarah.s4.title">Subholding Upstream</h5>
+            <p data-i18n="idx.sejarah.s4.desc">PHE mengambil alih 11 anak perusahaan hulu dan beroperasi sebagai Subholding.</p>
+          </div>
+        </div>
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="100">
+          <a href="sejarah.html" class="btn-outline-detail" data-i18n="idx.sejarah.btn">Lihat Sejarah Lengkap</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="struktur-organisasi" class="section">
+      <div class="container section-title" data-aos="fade-up">
+        <p data-i18n="idx.struktur.tag">Manajemen</p>
+        <h2 data-i18n="idx.struktur.title">Struktur Organisasi</h2>
+      </div>
+
+      <div class="container">
+        <p class="text-center text-muted mb-5" data-aos="fade-up" data-i18n="idx.struktur.desc">
+          Beberapa jajaran Direksi PT Pertamina Hulu Energi (Subholding Upstream).
+        </p>
+        <div class="row gy-4 justify-content-center">
+          
+          <div class="col-lg-3 col-md-6" data-aos="fade-up">
+            <div class="direksi-preview">
+              <div class="avatar"><img src="assets/img/SUNARYANTO.jpeg" alt="Sunaryanto"></div>
+              <h5>Sunaryanto</h5>
+              <span data-i18n="struktur.dirut">Direktur Utama</span>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="direksi-preview">
+              <div class="avatar"><img src="assets/img/VIRANO.jpeg" alt="Virano Gazi Nasution"></div>
+              <h5>Virano Gazi Nasution</h5>
+              <span data-i18n="struktur.wakil">Wakil Direktur Utama</span>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="direksi-preview">
+              <div class="avatar"><img src="assets/img/ASEP.jpeg" alt="Asep Samsul Arifin"></div>
+              <h5>Asep Samsul Arifin</h5>
+              <span data-i18n="struktur.eksplorasi">Direktur Eksplorasi</span>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="direksi-preview">
+              <div class="avatar"><img src="assets/img/MERY.jpeg" alt="Mery Luciawaty"></div>
+              <h5>Mery Luciawaty</h5>
+              <span data-i18n="struktur.strategis">Direktur Perencanaan Strategis</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+          <a href="struktur-organisasi.html" class="btn-detail" data-i18n="idx.struktur.btn">Lihat Struktur Lengkap</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="section" style="background:#f9f9f9;">
+      <div class="container section-title" data-aos="fade-up">
+        <p data-i18n="idx.kontak.tag">Hubungi Kami</p>
+        <h2 data-i18n="idx.kontak.title">Kontak & Maps</h2>
+      </div>
+
+      <div class="container">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-5" data-aos="fade-up">
+            <div class="contact-preview">
+              <div class="item">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div>
+                  <h6 data-i18n="idx.kontak.kantor">Kantor Pusat</h6>
+                  <p data-i18n="idx.kontak.alamat">PHE Tower, Jl. TB Simatupang Kav. 99, Jakarta Selatan 12520</p>
+                </div>
+              </div>
+              <div class="item">
+                <i class="bi bi-telephone-fill"></i>
+                <div>
+                  <h6 data-i18n="idx.kontak.telepon">Telepon</h6>
+                  <p><a href="tel:+622129547000" style="color: inherit; text-decoration: none;">+62 21 2954 7000</a></p>
+                </div>
+              </div>
+              <div class="item">
+                <i class="bi bi-envelope-fill"></i>
+                <div>
+                  <h6 data-i18n="idx.kontak.email">Email</h6>
+                  <p><a href="mailto:pcc135@pertamina.com" style="color: inherit; text-decoration: none;">pcc135@pertamina.com</a></p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <a href="contact.html" class="btn-detail" data-i18n="idx.kontak.btn">Lihat Kontak Lengkap</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <div class="maps-preview">
+              <iframe src="https://www.google.com/maps?q=PHE+Tower+Jl.+TB+Simatupang+Kav.+99+Jakarta&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="PHE Tower"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.brand">Pertamina Hulu Energi</h3>
+            <p class="mb-4" style="font-size:0.9rem;" data-i18n="footer.desc">Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.</p>
+            <p class="mb-0"><a href="about.html" class="btn-outline-detail" style="padding:8px 20px;font-size:0.85rem; border-color: #fff; color: #fff;" data-i18n="footer.selengkapnya">Selengkapnya</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.nav">Navigasi</h3>
+            <div class="row" style="font-size:0.9rem;">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+                  <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
+                  <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur Organisasi</a></li>
+                  <li><a href="berita.html" data-i18n="nav.berita">Berita</a></li>
+                  <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Maps</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.berita">Berita Terbaru</h3>
+            <ul class="list-unstyled footer-blog-entry" style="font-size:0.9rem;">
+              <!-- HANYA 1 BERITA -->
+              <li><span class="d-block date">31 Okt 2026</span><a href="berita.html" data-i18n="footer.berita1">PHE Tingkatkan Produksi</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading" data-i18n="footer.terhubung">Terhubung</h3>
+            <ul class="list-unstyled social-icons light mb-3">
+              <li><a href="https://www.facebook.com/pertamina" target="_blank" rel="noopener" title="Facebook"><span class="bi bi-facebook"></span></a></li>
+              <li><a href="https://twitter.com/pertamina" target="_blank" rel="noopener" title="Twitter/X"><span class="bi bi-twitter-x"></span></a></li>
+              <li><a href="https://www.linkedin.com/company/phepertamina/" target="_blank" rel="noopener" title="LinkedIn"><span class="bi bi-linkedin"></span></a></li>
+              <li><a href="https://www.instagram.com/phe.pertamina/" target="_blank" rel="noopener" title="Instagram"><span class="bi bi-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename text-white">Pertamina Hulu Energi</strong> <span data-i18n="footer.copyright">Seluruh Hak Cipta Dilindungi</span></p>
+        <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Dimodifikasi untuk PHE</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#beranda" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  
+  <script src="assets/js/main.js"></script>
+
+  <script>
+  const translations = {
+    id: {
+      "nav.beranda":"Beranda","nav.tentang":"Tentang Kami","nav.sejarah":"Sejarah","nav.struktur":"Struktur Organisasi","nav.berita":"Berita","nav.kontak":"Kontak & Maps",
+      "hero.title":"Menjaga Ketahanan Energi Nasional",
+      "hero.desc":"PT Pertamina Hulu Energi (PHE) sebagai Subholding Upstream Pertamina mengelola portofolio hulu migas di dalam dan luar negeri.",
+      "hero.btn":"Jelajahi",
+      "idx.about.tag":"Profil Perusahaan","idx.about.title":"Tentang Kami","idx.about.card":"Subholding Upstream Pertamina",
+      "idx.about.desc":"PHE merupakan anak perusahaan PT Pertamina (Persero) yang mengelola 58 anak perusahaan, 6 perusahaan patungan, dan 2 perusahaan afiliasi di sektor hulu migas.",
+      "idx.about.btn":"Lihat Detail Perusahaan","idx.about.stat1":"Anak Perusahaan","idx.about.stat2":"Perusahaan Patungan","idx.about.stat3":"WK Domestik","idx.about.stat4":"WK Internasional",
+      "idx.sejarah.tag":"Perjalanan Perusahaan","idx.sejarah.title":"Sejarah","idx.sejarah.btn":"Lihat Sejarah Lengkap",
+      "idx.sejarah.s1.title":"PT Aroma Operations Services","idx.sejarah.s1.desc":"Berdiri 17 November 1989 untuk mendukung kilang petrokimia Cilacap.",
+      "idx.sejarah.s2.title":"PT Pertahulu Energy","idx.sejarah.s2.desc":"Berganti nama seiring pemisahan usaha hulu-hilir Pertamina.",
+      "idx.sejarah.s3.title":"PT Pertamina Hulu Energi","idx.sejarah.s3.desc":"Nama resmi PHE disahkan melalui RUPS 29 Juni 2007.",
+      "idx.sejarah.s4.title":"Subholding Upstream","idx.sejarah.s4.desc":"PHE mengambil alih 11 anak perusahaan hulu dan beroperasi sebagai Subholding.",
+      "idx.struktur.tag":"Manajemen","idx.struktur.title":"Struktur Organisasi","idx.struktur.desc":"Beberapa jajaran Direksi PT Pertamina Hulu Energi (Subholding Upstream).","idx.struktur.btn":"Lihat Struktur Lengkap",
+      "idx.kontak.tag":"Hubungi Kami","idx.kontak.title":"Kontak & Maps","idx.kontak.btn":"Lihat Kontak Lengkap","idx.kontak.kantor":"Kantor Pusat","idx.kontak.alamat":"PHE Tower, Jl. TB Simatupang Kav. 99, Jakarta Selatan 12520","idx.kontak.telepon":"Telepon","idx.kontak.email":"Email",
+      "struktur.dirut":"Direktur Utama","struktur.wakil":"Wakil Direktur Utama","struktur.eksplorasi":"Direktur Eksplorasi","struktur.strategis":"Direktur Perencanaan Strategis",
+      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.","footer.selengkapnya":"Selengkapnya","footer.nav":"Navigasi","footer.berita":"Berita Terbaru","footer.terhubung":"Terhubung","footer.copyright":"Seluruh Hak Cipta Dilindungi","footer.berita1":"PHE Tingkatkan Produksi"
+    },
+    en: {
+      "nav.beranda":"Home","nav.tentang":"About Us","nav.sejarah":"History","nav.struktur":"Organization Structure","nav.berita":"News","nav.kontak":"Contact & Maps",
+      "hero.title":"Safeguarding National Energy Resilience",
+      "hero.desc":"PT Pertamina Hulu Energi (PHE), as Pertamina's Upstream Subholding, manages upstream oil and gas portfolios domestically and internationally.",
+      "hero.btn":"Explore",
+      "idx.about.tag":"Company Profile","idx.about.title":"About Us","idx.about.card":"Pertamina's Upstream Subholding",
+      "idx.about.desc":"PHE is a subsidiary of PT Pertamina (Persero) that manages 58 subsidiaries, 6 joint ventures, and 2 affiliated companies in the upstream oil and gas sector.",
+      "idx.about.btn":"View Company Details","idx.about.stat1":"Subsidiaries","idx.about.stat2":"Joint Ventures","idx.about.stat3":"Domestic WK","idx.about.stat4":"International WK",
+      "idx.sejarah.tag":"Company Journey","idx.sejarah.title":"History","idx.sejarah.btn":"View Full History",
+      "idx.sejarah.s1.title":"PT Aroma Operations Services","idx.sejarah.s1.desc":"Established November 17, 1989 to support the Cilacap petrochemical refinery.",
+      "idx.sejarah.s2.title":"PT Pertahulu Energy","idx.sejarah.s2.desc":"Renamed following Pertamina's upstream-downstream separation.",
+      "idx.sejarah.s3.title":"PT Pertamina Hulu Energi","idx.sejarah.s3.desc":"Official PHE name ratified at the General Meeting on June 29, 2007.",
+      "idx.sejarah.s4.title":"Upstream Subholding","idx.sejarah.s4.desc":"PHE took over 11 upstream subsidiaries and operates as Subholding.",
+      "idx.struktur.tag":"Management","idx.struktur.title":"Organization Structure","idx.struktur.desc":"Several members of the Board of Directors of PT Pertamina Hulu Energi.","idx.struktur.btn":"View Full Structure",
+      "idx.kontak.tag":"Contact Us","idx.kontak.title":"Contact & Maps","idx.kontak.btn":"View Full Contact","idx.kontak.kantor":"Head Office","idx.kontak.alamat":"PHE Tower, Jl. TB Simatupang Kav. 99, South Jakarta 12520","idx.kontak.telepon":"Phone","idx.kontak.email":"Email",
+      "struktur.dirut":"President Director","struktur.wakil":"Deputy President Director","struktur.eksplorasi":"Director of Exploration","struktur.strategis":"Director of Strategic Planning",
+      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Pertamina's Upstream Subholding. Safeguarding national energy resilience.","footer.selengkapnya":"Learn More","footer.nav":"Navigation","footer.berita":"Latest News","footer.terhubung":"Connect","footer.copyright":"All Rights Reserved","footer.berita1":"PHE Boosts Production"
+    }
+  };
+
+  let currentLang = localStorage.getItem('phe-lang') || 'id';
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('phe-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const tr = translations[lang] && translations[lang][key];
+      if (tr !== undefined) el.innerHTML = tr;
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    applyLanguage(currentLang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        applyLanguage(btn.dataset.lang);
+      });
+    });
+  });
+  </script>
+
+</body>
+</html>
