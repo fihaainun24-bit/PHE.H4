@@ -6,7 +6,6 @@
   <title>Pertamina Hulu Energi - Subholding Upstream</title>
   <meta name="description" content="PT Pertamina Hulu Energi (PHE), Subholding Upstream Pertamina.">
 
-  <!-- FAVICON MENGGUNAKAN FILE LOGOK -->
   <link href="assets/img/logok.png" rel="icon">
   <link href="assets/img/logok.png" rel="apple-touch-icon">
 
@@ -23,7 +22,6 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* --- STYLE HEADER & LOGO (DIPERBESAR) --- */
     .header .logo img {
       height: 60px;
       width: auto;
@@ -41,7 +39,6 @@
       margin-bottom: 0;
     }
 
-    /* --- STYLE HERO SECTION (GAMBAR STATIS) --- */
     .hero-phe {
       position: relative;
       overflow: hidden;
@@ -61,10 +58,10 @@
       z-index: 2; 
     }
 
-    /* --- STYLE FOTO DIREKSI (BERANDA) --- */
     .direksi-preview .avatar {
       overflow: hidden;
     }
+    
     .direksi-preview .avatar img {
       width: 100%;
       height: 100%;
@@ -72,7 +69,6 @@
       object-position: top center;
     }
     
-    /* --- STYLE FOOTER DARK MODE --- */
     .footer {
       background-color: #2b2b2b !important;
       border-top: 4px solid var(--pertamina-red);
@@ -80,23 +76,54 @@
       color: #e0e0e0;
     }
     
-    .footer .widget-heading { color: #ffffff !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 16px; }
-    .footer a, .footer .widget ul li a { color: #b0b0b0 !important; text-decoration: none; }
-    .footer a:hover, .footer .widget ul li a:hover { color: #ffffff !important; }
-    .footer .social-icons a span { color: #ffffff; }
-    .footer .social-icons a:hover span { color: var(--pertamina-red); }
-    .footer .copyright { border-top: 1px solid #444444; margin-top: 30px; padding: 20px 0; font-size: 0.85rem; }
+    .footer .widget-heading { 
+      color: #ffffff !important; 
+      font-weight: 700; 
+      font-size: 1.1rem; 
+      margin-bottom: 16px; 
+    }
     
-    /* PERBAIKAN WARNA TANGGAL FOOTER */
+    .footer a, 
+    .footer .widget ul li a { 
+      color: #b0b0b0 !important; 
+      text-decoration: none;
+    }
+    
+    .footer a:hover, 
+    .footer .widget ul li a:hover { 
+      color: #ffffff !important; 
+    }
+    
+    .footer .social-icons a span { 
+      color: #ffffff; 
+    }
+    
+    .footer .social-icons a:hover span { 
+      color: var(--pertamina-red); 
+    }
+    
+    .footer .copyright { 
+      border-top: 1px solid #444444; 
+      margin-top: 30px; 
+      padding: 20px 0; 
+      font-size: 0.85rem; 
+    }
+    
     .footer .widget .footer-blog-entry .date {
       color: #888 !important; 
     }
 
-    /* --- RESPONSIVE MOBILE --- */
     @media (max-width: 768px) {
-      .hero-phe { padding: 120px 0 90px; min-height: 60vh; }
-      .header .logo h1 { font-size: 1.1rem; }
-      .header .logo img { height: 45px; }
+      .hero-phe { 
+        padding: 120px 0 90px; 
+        min-height: 60vh; 
+      }
+      .header .logo h1 { 
+        font-size: 1.1rem; 
+      }
+      .header .logo img { 
+        height: 45px; 
+      }
     }
   </style>
 </head>
@@ -342,7 +369,6 @@
           <div class="widget">
             <h3 class="widget-heading" data-i18n="footer.berita">Berita Terbaru</h3>
             <ul class="list-unstyled footer-blog-entry" style="font-size:0.9rem;">
-              <!-- HANYA 1 BERITA -->
               <li><span class="d-block date">31 Okt 2026</span><a href="berita.html" data-i18n="footer.berita1">PHE Tingkatkan Produksi</a></li>
             </ul>
           </div>
