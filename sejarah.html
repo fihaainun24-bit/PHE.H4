@@ -70,7 +70,6 @@
     .page-title .breadcrumbs ol li.current { color: #fff; font-weight: 600; }
     .page-title .breadcrumbs ol li + li::before { content: "/"; color: rgba(255,255,255,0.6); margin-right: 8px; }
 
-    /* Section Styling */
     .section { padding: 50px 0; }
     
     .content-subtitle { color: var(--pertamina-red); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
@@ -82,7 +81,6 @@
     }
     .btn-detail:hover { background: #b0151b !important; border-color: #b0151b !important; color: #fff !important; }
 
-    /* Intro Box */
     .intro-box {
       background: #fff; border-radius: 14px; padding: 35px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.06);
@@ -92,23 +90,19 @@
     .intro-box p { font-size: 1rem; line-height: 1.8; color: #444; text-align: justify; }
     .intro-box p:last-child { margin-bottom: 0; }
 
-    /* ============================================================
-       DESAIN TIMELINE BARU: Vertikal Kiri (Lebih Full & Rapi)
-       ============================================================ */
     .timeline-wrapper {
       position: relative;
       max-width: 900px;
       margin: 0 auto;
-      padding: 10px 0 10px 20px; /* Spasi dari kiri */
+      padding: 10px 0 10px 20px;
     }
 
-    /* Garis vertikal */
     .timeline-wrapper::before {
       content: '';
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 36px; /* Posisi garis di tengah-tengah titik */
+      left: 36px;
       width: 4px;
       background: #e0e0e0;
       border-radius: 2px;
@@ -119,8 +113,8 @@
       background: #fff;
       border-radius: 10px;
       padding: 25px 30px;
-      margin-bottom: 25px; /* Jarak antar card, tidak terlalu menumpuk */
-      margin-left: 60px; /* Jarak dari garis */
+      margin-bottom: 25px;
+      margin-left: 60px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       border-left: 5px solid var(--pertamina-red);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -131,12 +125,11 @@
       box-shadow: 0 8px 25px rgba(215,25,32,0.15);
     }
 
-    /* Titik di garis waktu */
     .timeline-card::before {
       content: '';
       position: absolute;
       top: 30px;
-      left: -76px; /* Posisi titik agar pas di garis */
+      left: -76px;
       width: 20px;
       height: 20px;
       background: #fff;
@@ -173,7 +166,6 @@
       text-align: justify;
     }
 
-    /* Responsif untuk Mobile */
     @media (max-width: 768px) {
       .timeline-wrapper { padding-left: 10px; }
       .timeline-wrapper::before { left: 20px; }
@@ -190,7 +182,6 @@
       }
     }
 
-    /* Footer */
     .footer {
       background-color: #2b2b2b !important;
       border-top: 4px solid var(--pertamina-red);
@@ -296,7 +287,6 @@
     <section class="section" style="background:#f9f9f9;">
       <div class="container">
         
-        <!-- TIMELINE BARU: Full width, box per tahun, rapi -->
         <div class="timeline-wrapper">
 
           <div class="timeline-card" data-aos="fade-up">
@@ -515,6 +505,16 @@
         e.preventDefault();
         applyLanguage(btn.dataset.lang);
       });
+    });
+
+    document.querySelector('.header .logo').addEventListener('click', function(e) {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const targetPath = this.getAttribute('href');
+      
+      if (currentPath === targetPath) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     });
   });
   </script>

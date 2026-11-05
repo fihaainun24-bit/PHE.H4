@@ -572,6 +572,17 @@
           submitBtn.innerHTML = '<span data-i18n="contact.form.btn">Kirim Pesan</span> <i class="bi bi-send ms-1"></i>';
       });
     });
+
+    // --- MENCEGAH REFRESH SAAT KLIK LOGO DI HALAMAN YANG SAMA ---
+    document.querySelector('.header .logo').addEventListener('click', function(e) {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const targetPath = this.getAttribute('href');
+      
+      if (currentPath === targetPath) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
   });
   </script>
 

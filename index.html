@@ -485,6 +485,16 @@
         applyLanguage(btn.dataset.lang);
       });
     });
+
+    document.querySelector('.header .logo').addEventListener('click', function(e) {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const targetPath = this.getAttribute('href');
+      
+      if (currentPath === targetPath) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
   });
   </script>
 
