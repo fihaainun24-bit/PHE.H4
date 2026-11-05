@@ -486,15 +486,18 @@
       });
     });
 
-    document.querySelector('.header .logo').addEventListener('click', function(e) {
-      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-      const targetPath = this.getAttribute('href');
-      
-      if (currentPath === targetPath) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
+    // --- PERBAIKAN TOTAL: MATIKAN FUNGSI KLIK PADA LOGO JIKA DI HALAMAN YANG SAMA ---
+    const logoLink = document.querySelector('.header .logo');
+    if (logoLink) {
+      logoLink.addEventListener('click', function(e) {
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const targetPath = this.getAttribute('href');
+        
+        if (currentPath === targetPath) {
+          e.preventDefault(); // Hanya batalkan refresh/redirect. Halaman akan benar-benar diam.
+        }
+      });
+    }
   });
   </script>
 

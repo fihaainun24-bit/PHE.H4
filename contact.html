@@ -209,10 +209,10 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       
-      <a href="index.html" class="logo d-flex align-items-center">
+      <div class="logo d-flex align-items-center" style="cursor: default;">
         <img src="assets/img/logok.png" alt="Logo Pertamina">
         <h1 class="sitename">Pertamina Hulu Energi</h1>
-      </a>
+      </div>
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -571,17 +571,6 @@
           submitBtn.disabled = false;
           submitBtn.innerHTML = '<span data-i18n="contact.form.btn">Kirim Pesan</span> <i class="bi bi-send ms-1"></i>';
       });
-    });
-
-    // --- MENCEGAH REFRESH SAAT KLIK LOGO DI HALAMAN YANG SAMA ---
-    document.querySelector('.header .logo').addEventListener('click', function(e) {
-      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-      const targetPath = this.getAttribute('href');
-      
-      if (currentPath === targetPath) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
     });
   });
   </script>
