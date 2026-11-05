@@ -61,7 +61,7 @@
       background: linear-gradient(105deg, rgba(215,25,32,0.95) 0%, rgba(176,21,27,0.95) 100%),
                   url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       color: #fff;
-      padding: 100px 0 70px;
+      padding: 90px 0 60px;
     }
     .page-title h1 { color: #fff; font-weight: 700; font-size: 2.6rem; margin-bottom: 10px; }
     .page-title .breadcrumbs ol { list-style: none; padding: 0; margin: 0; display: flex; gap: 8px; flex-wrap: wrap; font-size: 0.9rem; }
@@ -70,11 +70,9 @@
     .page-title .breadcrumbs ol li.current { color: #fff; font-weight: 600; }
     .page-title .breadcrumbs ol li + li::before { content: "/"; color: rgba(255,255,255,0.6); margin-right: 8px; }
 
-    .section { padding: 70px 0; }
-    .section-title { text-align: center; margin-bottom: 45px; }
-    .section-title p { color: var(--pertamina-red); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 6px; }
-    .section-title h2 { font-weight: 700; color: var(--pertamina-dark); font-size: 2rem; }
-
+    /* Section Styling */
+    .section { padding: 50px 0; }
+    
     .content-subtitle { color: var(--pertamina-red); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
 
     .btn-detail {
@@ -84,67 +82,150 @@
     }
     .btn-detail:hover { background: #b0151b !important; border-color: #b0151b !important; color: #fff !important; }
 
-    .timeline-phe { position: relative; max-width: 900px; margin: 0 auto; padding: 20px 0; }
-    .timeline-phe::before {
-      content: ""; position: absolute; left: 50%; top: 0; bottom: 0;
-      width: 4px; background: var(--pertamina-red); transform: translateX(-50%);
-      border-radius: 2px;
-    }
-    .timeline-item { position: relative; width: 50%; padding: 25px 45px; box-sizing: border-box; }
-    .timeline-item.left { left: 0; text-align: right; }
-    .timeline-item.right { left: 50%; text-align: left; }
-    .timeline-item::after {
-      content: ""; position: absolute; top: 35px; width: 20px; height: 20px;
-      background: #fff; border: 5px solid var(--pertamina-red); border-radius: 50%; z-index: 1;
-    }
-    .timeline-item.left::after { right: -10px; }
-    .timeline-item.right::after { left: -10px; }
-    .timeline-item .year {
-      display: inline-block; background: var(--pertamina-red); color: #fff;
-      font-weight: 700; padding: 5px 16px; border-radius: 20px;
-      font-size: 0.9rem; margin-bottom: 12px;
-    }
-    .timeline-item h4 { font-size: 1.15rem; font-weight: 700; color: var(--pertamina-dark); margin-bottom: 8px; }
-    .timeline-item p { font-size: 0.95rem; color: #555; margin: 0; line-height: 1.7; }
-
-    @media (max-width: 768px) {
-      .timeline-phe::before { left: 20px; }
-      .timeline-item { width: 100%; left: 0 !important; text-align: left !important; padding: 20px 10px 20px 55px; }
-      .timeline-item::after { left: 10px !important; right: auto !important; top: 30px; }
-    }
-
+    /* Intro Box */
     .intro-box {
-      background: #fff; border-radius: 14px; padding: 40px;
+      background: #fff; border-radius: 14px; padding: 35px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.06);
       border-top: 5px solid var(--pertamina-red);
+      margin-bottom: 20px;
     }
-    .intro-box p { font-size: 1rem; line-height: 1.8; color: #444; }
+    .intro-box p { font-size: 1rem; line-height: 1.8; color: #444; text-align: justify; }
     .intro-box p:last-child { margin-bottom: 0; }
 
+    /* ============================================================
+       DESAIN TIMELINE BARU: Vertikal Kiri (Lebih Full & Rapi)
+       ============================================================ */
+    .timeline-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 0 10px 20px; /* Spasi dari kiri */
+    }
+
+    /* Garis vertikal */
+    .timeline-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 36px; /* Posisi garis di tengah-tengah titik */
+      width: 4px;
+      background: #e0e0e0;
+      border-radius: 2px;
+    }
+
+    .timeline-card {
+      position: relative;
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px 30px;
+      margin-bottom: 25px; /* Jarak antar card, tidak terlalu menumpuk */
+      margin-left: 60px; /* Jarak dari garis */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-left: 5px solid var(--pertamina-red);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(215,25,32,0.15);
+    }
+
+    /* Titik di garis waktu */
+    .timeline-card::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: -76px; /* Posisi titik agar pas di garis */
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 4px solid var(--pertamina-red);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-card .year {
+      display: inline-block;
+      background: var(--pertamina-red);
+      color: #fff;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .timeline-card h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--pertamina-dark);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .timeline-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 0;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    /* Responsif untuk Mobile */
+    @media (max-width: 768px) {
+      .timeline-wrapper { padding-left: 10px; }
+      .timeline-wrapper::before { left: 20px; }
+      .timeline-card {
+        margin-left: 40px;
+        padding: 20px;
+      }
+      .timeline-card::before {
+        left: -32px;
+        width: 16px;
+        height: 16px;
+        top: 25px;
+        border-width: 3px;
+      }
+    }
+
+    /* Footer */
     .footer {
       background-color: #2b2b2b !important;
       border-top: 4px solid var(--pertamina-red);
-      padding-top: 50px;
+      padding-top: 40px;
       color: #e0e0e0;
     }
     
-    .footer .widget-heading { color: #ffffff !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 16px; }
+    .footer .widget-heading { 
+      color: #ffffff !important; 
+      font-weight: 700; 
+      font-size: 1.1rem; 
+      margin-bottom: 16px; 
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer .widget-heading img {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+    }
+
     .footer a, .footer .widget ul li a { color: #b0b0b0 !important; text-decoration: none; }
     .footer a:hover, .footer .widget ul li a:hover { color: #ffffff !important; }
     .footer .social-icons a span { color: #ffffff; }
     .footer .social-icons a:hover span { color: var(--pertamina-red); }
-    .footer .copyright { border-top: 1px solid #444444; margin-top: 30px; padding: 20px 0; font-size: 0.85rem; }
+    .footer .copyright { border-top: 1px solid #444444; margin-top: 20px; padding: 20px 0; font-size: 0.85rem; }
     
-    /* PERBAIKAN WARNA TANGGAL FOOTER */
-    .footer .widget .footer-blog-entry .date {
-      color: #888 !important; 
-    }
+    .footer .widget .footer-blog-entry .date { color: #888 !important; }
 
     @media (max-width: 768px) {
       .page-title h1 { font-size: 2rem; }
-      .page-title { padding: 80px 0 55px; }
-      .section { padding: 55px 0; }
-      .intro-box { padding: 25px; }
+      .page-title { padding: 70px 0 50px; }
+      .section { padding: 35px 0; }
+      .intro-box { padding: 20px; }
       .header .logo img { height: 45px; }
       .header .sitename { font-size: 1.1rem; }
     }
@@ -214,9 +295,11 @@
 
     <section class="section" style="background:#f9f9f9;">
       <div class="container">
-        <div class="timeline-phe">
+        
+        <!-- TIMELINE BARU: Full width, box per tahun, rapi -->
+        <div class="timeline-wrapper">
 
-          <div class="timeline-item left" data-aos="fade-up">
+          <div class="timeline-card" data-aos="fade-up">
             <span class="year">1989</span>
             <h4 data-i18n="sejarah.tl.1989.title">PT Aroma Operations Services (AOS)</h4>
             <p data-i18n="sejarah.tl.1989.desc">
@@ -226,7 +309,7 @@
             </p>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-card" data-aos="fade-up" data-aos-delay="100">
             <span class="year">2001–2002</span>
             <h4 data-i18n="sejarah.tl.2002.title">Menjadi PT Pertahulu Energy</h4>
             <p data-i18n="sejarah.tl.2002.desc">
@@ -237,7 +320,7 @@
             </p>
           </div>
 
-          <div class="timeline-item left" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-card" data-aos="fade-up" data-aos-delay="200">
             <span class="year">2007</span>
             <h4 data-i18n="sejarah.tl.2007.title">Menjadi PT Pertamina Hulu Energi</h4>
             <p data-i18n="sejarah.tl.2007.desc">
@@ -248,7 +331,7 @@
             </p>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="300">
+          <div class="timeline-card" data-aos="fade-up" data-aos-delay="300">
             <span class="year">2010–2019</span>
             <h4 data-i18n="sejarah.tl.2010.title">Ekspansi Portofolio</h4>
             <p data-i18n="sejarah.tl.2010.desc">
@@ -259,7 +342,7 @@
             </p>
           </div>
 
-          <div class="timeline-item left" data-aos="fade-up" data-aos-delay="400">
+          <div class="timeline-card" data-aos="fade-up" data-aos-delay="400">
             <span class="year">2021</span>
             <h4 data-i18n="sejarah.tl.2021.title">Subholding Upstream</h4>
             <p data-i18n="sejarah.tl.2021.desc">
@@ -270,7 +353,7 @@
             </p>
           </div>
 
-          <div class="timeline-item right" data-aos="fade-up" data-aos-delay="500">
+          <div class="timeline-card" data-aos="fade-up" data-aos-delay="500">
             <span class="year" data-i18n="sejarah.tl.kini.year">Kini</span>
             <h4 data-i18n="sejarah.tl.kini.title">Menuju Perusahaan Energi Global</h4>
             <p data-i18n="sejarah.tl.kini.desc">
@@ -282,6 +365,7 @@
           </div>
 
         </div>
+
       </div>
     </section>
 
@@ -303,7 +387,10 @@
       <div class="row g-4">
         <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
           <div class="widget">
-            <h3 class="widget-heading" data-i18n="footer.brand">Pertamina Hulu Energi</h3>
+            <h3 class="widget-heading">
+              <img src="assets/img/logok.png" alt="Logo Pertamina">
+              Pertamina Hulu Energi
+            </h3>
             <p class="mb-4" style="font-size:0.9rem;" data-i18n="footer.desc">Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.</p>
             <p class="mb-0"><a href="about.html" class="btn-outline-detail" style="padding:8px 20px;font-size:0.85rem; border-color: #fff; color: #fff;" data-i18n="footer.selengkapnya">Selengkapnya</a></p>
           </div>

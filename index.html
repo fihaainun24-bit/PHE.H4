@@ -26,9 +26,9 @@
       height: 60px;
       width: auto;
       object-fit: contain;
-      margin-right: 15px; 
+      margin-right: 15px;
     }
-    
+
     .header .logo h1 {
       font-size: 1.5rem;
       font-weight: 700;
@@ -45,85 +45,94 @@
       overflow: hidden;
       background: linear-gradient(105deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 100%),
                   url('assets/img/bg.jpg') center center / cover no-repeat;
-      padding: 180px 0 120px; 
+      padding: 180px 0 120px;
       min-height: 80vh;
       display: flex;
       align-items: center;
     }
-    
+
     .hero-phe::after {
-      display: none; 
+      display: none;
     }
 
     .hero-phe .container {
-      z-index: 2; 
+      z-index: 2;
     }
 
     .direksi-preview .avatar {
       overflow: hidden;
     }
-    
+
     .direksi-preview .avatar img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top center;
     }
-    
+
     .footer {
       background-color: #2b2b2b !important;
       border-top: 4px solid var(--pertamina-red);
       padding-top: 50px;
       color: #e0e0e0;
     }
-    
-    .footer .widget-heading { 
-      color: #ffffff !important; 
-      font-weight: 700; 
-      font-size: 1.1rem; 
-      margin-bottom: 16px; 
+
+    .footer .widget-heading {
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    
-    .footer a, 
-    .footer .widget ul li a { 
-      color: #b0b0b0 !important; 
+
+    .footer .widget-heading img {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .footer a,
+    .footer .widget ul li a {
+      color: #b0b0b0 !important;
       text-decoration: none;
     }
-    
-    .footer a:hover, 
-    .footer .widget ul li a:hover { 
-      color: #ffffff !important; 
+
+    .footer a:hover,
+    .footer .widget ul li a:hover {
+      color: #ffffff !important;
     }
-    
-    .footer .social-icons a span { 
-      color: #ffffff; 
+
+    .footer .social-icons a span {
+      color: #ffffff;
     }
-    
-    .footer .social-icons a:hover span { 
-      color: var(--pertamina-red); 
+
+    .footer .social-icons a:hover span {
+      color: var(--pertamina-red);
     }
-    
-    .footer .copyright { 
-      border-top: 1px solid #444444; 
-      margin-top: 30px; 
-      padding: 20px 0; 
-      font-size: 0.85rem; 
+
+    .footer .copyright {
+      border-top: 1px solid #444444;
+      margin-top: 30px;
+      padding: 20px 0;
+      font-size: 0.85rem;
     }
-    
+
     .footer .widget .footer-blog-entry .date {
-      color: #888 !important; 
+      color: #888 !important;
     }
 
     @media (max-width: 768px) {
-      .hero-phe { 
-        padding: 120px 0 90px; 
-        min-height: 60vh; 
+      .hero-phe {
+        padding: 120px 0 90px;
+        min-height: 60vh;
       }
-      .header .logo h1 { 
-        font-size: 1.1rem; 
+      .header .logo h1 {
+        font-size: 1.1rem;
       }
-      .header .logo img { 
-        height: 45px; 
+      .header .logo img {
+        height: 45px;
       }
     }
   </style>
@@ -133,7 +142,7 @@
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      
+
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logok.png" alt="Logo Pertamina">
         <h1 class="sitename">Pertamina Hulu Energi</h1>
@@ -248,7 +257,7 @@
           Beberapa jajaran Direksi PT Pertamina Hulu Energi (Subholding Upstream).
         </p>
         <div class="row gy-4 justify-content-center">
-          
+
           <div class="col-lg-3 col-md-6" data-aos="fade-up">
             <div class="direksi-preview">
               <div class="avatar"><img src="assets/img/SUNARYANTO.jpeg" alt="Sunaryanto"></div>
@@ -256,7 +265,7 @@
               <span data-i18n="struktur.dirut">Direktur Utama</span>
             </div>
           </div>
-          
+
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="direksi-preview">
               <div class="avatar"><img src="assets/img/VIRANO.jpeg" alt="Virano Gazi Nasution"></div>
@@ -264,7 +273,7 @@
               <span data-i18n="struktur.wakil">Wakil Direktur Utama</span>
             </div>
           </div>
-          
+
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="direksi-preview">
               <div class="avatar"><img src="assets/img/ASEP.jpeg" alt="Asep Samsul Arifin"></div>
@@ -272,7 +281,7 @@
               <span data-i18n="struktur.eksplorasi">Direktur Eksplorasi</span>
             </div>
           </div>
-          
+
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="direksi-preview">
               <div class="avatar"><img src="assets/img/MERY.jpeg" alt="Mery Luciawaty"></div>
@@ -340,7 +349,10 @@
       <div class="row g-4">
         <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
           <div class="widget">
-            <h3 class="widget-heading" data-i18n="footer.brand">Pertamina Hulu Energi</h3>
+            <h3 class="widget-heading">
+              <img src="assets/img/logok.png" alt="Logo Pertamina">
+              Pertamina Hulu Energi
+            </h3>
             <p class="mb-4" style="font-size:0.9rem;" data-i18n="footer.desc">Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.</p>
             <p class="mb-0"><a href="about.html" class="btn-outline-detail" style="padding:8px 20px;font-size:0.85rem; border-color: #fff; color: #fff;" data-i18n="footer.selengkapnya">Selengkapnya</a></p>
           </div>
@@ -404,7 +416,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  
+
   <script src="assets/js/main.js"></script>
 
   <script>

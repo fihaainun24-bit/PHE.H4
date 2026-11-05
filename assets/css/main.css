@@ -96,6 +96,43 @@ h6 {
   font-family: var(--heading-font);
 }
 
+/* ============================================================
+   REVISI 1: Justify semua teks paragraf agar rapi
+   ============================================================ */
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Pengecualian: elemen yang tetap center/left */
+.section-title p,
+.hero-phe p,
+.text-center p,
+.stat-box .label,
+.mini-step p,
+.direksi-preview span,
+.direksi-card .jabatan,
+.blog-details .content blockquote p,
+.footer .copyright p,
+.contact-preview .item h6,
+.contact-info-card h5,
+.page-title .breadcrumbs ol,
+.hero-phe h1 {
+  text-align: inherit;
+}
+
+.summary-card p,
+.nilai-card p,
+.vm-box p,
+.intro-box p,
+.timeline-item p,
+.contact-info-card p,
+.contact-preview .item p,
+.contact-form-wrap .subtitle {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 /* PHP Email Form Messages */
 .php-email-form .error-message {
   display: none;
@@ -483,7 +520,7 @@ h6 {
 .footer {
   background-color: var(--pertamina-gray);
   color: var(--default-color);
-  padding: 60px 0 0;
+  padding: 40px 0 0;            /* REVISI 3: sebelumnya 60px 0 0 */
   font-size: 14px;
   border-top: 4px solid var(--pertamina-red);
 }
@@ -497,15 +534,27 @@ h6 {
 }
 
 .footer .copyright {
-  margin-top: 50px;
+  margin-top: 30px;             /* REVISI 3: sebelumnya 50px */
   position: relative;
-  padding: 20px 0;
+  padding: 15px 0;              /* REVISI 3: sebelumnya 20px 0 */
   border-top: 1px solid #ddd;
 }
 
 .footer .copyright p,
 .footer .copyright .credits {
   margin: 2px 0;
+}
+
+/* ============================================================
+   REVISI 2: Sembunyikan credit BootstrapMade di footer
+   ============================================================ */
+.footer .credits {
+  display: none !important;
+}
+
+.footer .copyright {
+  justify-content: center !important;
+  text-align: center;
 }
 
 .footer .btn-learn-more {
@@ -610,8 +659,8 @@ h6 {
   padding: 0;
   margin: 0;
   font-size: 1.5rem;
-  background-color: transparent; /* FIX: was 'none' */
-  border-color: transparent;    /* FIX: was 'none' */
+  background-color: transparent;
+  border-color: transparent;
   position: absolute;
   line-height: 0;
   color: color-mix(in srgb, var(--heading-color), transparent 20%);
@@ -710,7 +759,7 @@ h6 {
 .page-title {
   color: #ffffff;
   background-color: var(--pertamina-red);
-  padding: 80px 0 60px;
+  padding: 60px 0 40px;         /* REVISI 3: sebelumnya 80px 0 60px */
   position: relative;
 }
 
@@ -758,7 +807,7 @@ h6 {
 
 @media (max-width: 768px) {
   .page-title {
-    padding: 60px 0 45px;
+    padding: 45px 0 30px;       /* REVISI 3: sebelumnya 60px 0 45px */
   }
   .page-title h1 {
     font-size: 2rem;
@@ -772,15 +821,15 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
-  scroll-margin-top: 100px;
+  padding: 40px 0;              /* REVISI 3: sebelumnya 60px 0 */
+  scroll-margin-top: 90px;      /* REVISI 3: sebelumnya 100px */
   overflow: clip;
 }
 
 @media (max-width: 1199px) {
   section,
   .section {
-    scroll-margin-top: 66px;
+    scroll-margin-top: 60px;    /* REVISI 3: sebelumnya 66px */
   }
 }
 
@@ -789,7 +838,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 35px;         /* REVISI 3: sebelumnya 60px */
   position: relative;
 }
 
@@ -866,8 +915,8 @@ section,
 --------------------------------------------------------------*/
 .about-2 .content {
   background-color: var(--surface-color);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;            /* REVISI 3: sebelumnya 50px */
+  padding-bottom: 40px;         /* REVISI 3: sebelumnya 50px */
 }
 
 .about-2 .content-subtitle {
@@ -915,8 +964,8 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;            /* REVISI 3: sebelumnya 60px */
+  padding-bottom: 40px;         /* REVISI 3: sebelumnya 60px */
 }
 
 .services .services-item .services-icon {
@@ -938,7 +987,7 @@ section,
 # Stats Section
 --------------------------------------------------------------*/
 .stats {
-  padding-top: 60px;
+  padding-top: 40px;            /* REVISI 3: sebelumnya 60px */
 }
 
 .stats .content-subtitle {
@@ -2480,8 +2529,9 @@ section,
   background: linear-gradient(105deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 100%),
               url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
   color: #fff;
-  padding: 150px 0 120px;
+  padding: 130px 0 90px;        /* REVISI 3: sebelumnya 150px 0 120px */
   position: relative;
+  min-height: 70vh;             /* REVISI 3: baru ditambahkan */
 }
 
 .hero-phe::after {
@@ -2570,7 +2620,7 @@ section,
 .summary-card {
   background: #fff;
   border-radius: 14px;
-  padding: 35px 30px;
+  padding: 28px 25px;           /* REVISI BONUS: sebelumnya 35px 30px */
   height: 100%;
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
   border-top: 5px solid var(--pertamina-red);
@@ -2605,7 +2655,7 @@ section,
 /* ----- Stats Box ----- */
 .stat-box {
   text-align: center;
-  padding: 22px 10px;
+  padding: 18px 10px;           /* REVISI BONUS: sebelumnya 22px 10px */
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -2694,7 +2744,7 @@ section,
 .direksi-preview {
   background: #fff;
   border-radius: 12px;
-  padding: 24px 16px;
+  padding: 20px 14px;           /* REVISI BONUS: sebelumnya 24px 16px */
   text-align: center;
   height: 100%;
   box-shadow: 0 6px 24px rgba(0,0,0,0.06);
@@ -2726,7 +2776,7 @@ section,
 .direksi-card {
   background: #fff;
   border-radius: 14px;
-  padding: 35px 22px;
+  padding: 28px 20px;           /* REVISI BONUS: sebelumnya 35px 22px */
   text-align: center;
   height: 100%;
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
@@ -2818,8 +2868,8 @@ section,
   border: 4px solid #fff;
 }
 
-.maps-preview iframe { width: 100%; height: 340px; border: 0; }
-.maps-full iframe { width: 100%; height: 480px; border: 0; }
+.maps-preview iframe { width: 100%; height: 300px; border: 0; }   /* REVISI BONUS: sebelumnya 340px */
+.maps-full iframe { width: 100%; height: 420px; border: 0; }      /* REVISI BONUS: sebelumnya 480px */
 
 @media (max-width: 768px) {
   .maps-full iframe { height: 320px; }
@@ -2964,7 +3014,7 @@ section,
 .intro-box {
   background: #fff;
   border-radius: 14px;
-  padding: 40px;
+  padding: 30px;                /* REVISI BONUS: sebelumnya 40px */
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
   border-top: 5px solid var(--pertamina-red);
 }
@@ -2978,7 +3028,7 @@ section,
 .intro-box p:last-child { margin-bottom: 0; }
 
 @media (max-width: 768px) {
-  .intro-box { padding: 25px; }
+  .intro-box { padding: 22px; }
 }
 
 /* ----- Visi Misi Box ----- */
@@ -3050,7 +3100,7 @@ section,
   background: linear-gradient(135deg, var(--pertamina-red), #b0151b);
   color: #fff;
   border-radius: 16px;
-  padding: 45px 40px;
+  padding: 35px 30px;           /* REVISI BONUS: sebelumnya 45px 40px */
   box-shadow: 0 12px 40px rgba(215,25,32,0.25);
 }
 
@@ -3085,7 +3135,7 @@ section,
   background: linear-gradient(135deg, var(--pertamina-red), #b0151b);
   color: #fff;
   border-radius: 16px;
-  padding: 40px;
+  padding: 35px 30px;           /* REVISI BONUS: sebelumnya 40px */
   box-shadow: 0 12px 40px rgba(215,25,32,0.25);
   text-align: center;
 }
@@ -3128,14 +3178,14 @@ section,
 }
 
 @media (max-width: 768px) {
-  .cta-strip, .sosmed-strip { padding: 28px; }
+  .cta-strip, .sosmed-strip { padding: 25px 20px; }
 }
 
 /* ----- Org Chart ----- */
 .org-chart {
   background: #fff;
   border-radius: 14px;
-  padding: 40px 30px;
+  padding: 30px;                /* REVISI BONUS: sebelumnya 40px 30px */
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
   text-align: center;
 }
@@ -3176,7 +3226,7 @@ section,
 .contact-form-wrap {
   background: #fff;
   border-radius: 14px;
-  padding: 40px;
+  padding: 30px;                /* REVISI BONUS: sebelumnya 40px */
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
   border-top: 5px solid var(--pertamina-red);
 }
@@ -3220,5 +3270,100 @@ section,
 }
 
 @media (max-width: 768px) {
-  .contact-form-wrap { padding: 28px; }
+  .contact-form-wrap { padding: 22px; }
+}
+
+/* ============================================================
+   REVISI TAMBAHAN: Rapatkan spacing di dalam section
+   ============================================================ */
+.container.section-title {
+  margin-bottom: 0;
+}
+
+.section .row.gy-5 {
+  --bs-gutter-y: 2rem;
+}
+
+.section .row.gy-4 {
+  --bs-gutter-y: 1.25rem;
+}
+
+.section-title h2 {
+  margin-bottom: 0;
+}
+
+.section-title p {
+  margin-bottom: 8px;
+}
+
+/* Responsive: mobile lebih rapat */
+@media (max-width: 768px) {
+  section,
+  .section {
+    padding: 30px 0;
+  }
+
+  .section-title {
+    padding-bottom: 25px;
+  }
+
+  .hero-phe {
+    padding: 100px 0 70px;
+    min-height: 55vh;
+  }
+}
+
+section,
+.section {
+  padding: 30px 0 !important; 
+}
+
+
+.section-title {
+  padding-bottom: 25px !important; 
+}
+
+
+.section .row.gy-5 {
+  --bs-gutter-y: 1.5rem !important; /* Sebelumnya 2rem */
+}
+
+.section .row.gy-4 {
+  --bs-gutter-y: 1rem !important; /* Sebelumnya 1.25rem */
+}
+
+/* 4. Perbaikan Footer: Menyejajarkan Logo dan Teks */
+.footer .widget .widget-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Jarak antara logo dan teks */
+  margin-bottom: 16px;
+}
+
+/* Mengatur ukuran logo Pertamina di footer */
+.footer .widget .widget-heading img {
+  height: 32px; /* Sesuaikan tinggi logo agar pas dengan teks */
+  width: auto;
+  object-fit: contain;
+}
+
+/* 5. (Opsional) Rapatkan Hero Section di halaman depan */
+.hero-phe {
+  padding: 120px 0 80px !important;
+  min-height: 65vh !important;
+}
+
+/* 6. Khusus mobile, rapatkan lagi */
+@media (max-width: 768px) {
+  section,
+  .section {
+    padding: 25px 0 !important;
+  }
+  .section-title {
+    padding-bottom: 20px !important;
+  }
+  .hero-phe {
+    padding: 100px 0 60px !important;
+    min-height: 50vh !important;
+  }
 }

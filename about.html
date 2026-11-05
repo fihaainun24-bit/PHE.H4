@@ -138,14 +138,27 @@
       color: #e0e0e0;
     }
     
-    .footer .widget-heading { color: #ffffff !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 16px; }
+    .footer .widget-heading { 
+      color: #ffffff !important; 
+      font-weight: 700; 
+      font-size: 1.1rem; 
+      margin-bottom: 16px; 
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer .widget-heading img {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+    }
+
     .footer a, .footer .widget ul li a { color: #b0b0b0 !important; text-decoration: none; }
     .footer a:hover, .footer .widget ul li a:hover { color: #ffffff !important; }
     .footer .social-icons a span { color: #ffffff; }
     .footer .social-icons a:hover span { color: var(--pertamina-red); }
     .footer .copyright { border-top: 1px solid #444444; margin-top: 30px; padding: 20px 0; font-size: 0.85rem; }
     
-    /* PERBAIKAN WARNA TANGGAL FOOTER */
     .footer .widget .footer-blog-entry .date {
       color: #888 !important; 
     }
@@ -338,7 +351,10 @@
       <div class="row g-4">
         <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
           <div class="widget">
-            <h3 class="widget-heading" data-i18n="footer.brand">Pertamina Hulu Energi</h3>
+            <h3 class="widget-heading">
+              <img src="assets/img/logok.png" alt="Logo Pertamina">
+              Pertamina Hulu Energi
+            </h3>
             <p class="mb-4" style="font-size:0.9rem;" data-i18n="footer.desc">Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.</p>
             <p class="mb-0"><a href="about.html" class="btn-outline-detail" style="padding:8px 20px;font-size:0.85rem; border-color: #fff; color: #fff;" data-i18n="footer.selengkapnya">Selengkapnya</a></p>
           </div>
