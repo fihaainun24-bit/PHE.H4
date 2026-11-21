@@ -1,226 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Struktur Organisasi - Pertamina Hulu Energi</title>
-  <meta name="description" content="Susunan Dewan Komisaris dan Direksi PT Pertamina Hulu Energi (PHE), Subholding Upstream Pertamina.">
-
-  <link href="assets/img/logok.png" rel="icon">
-  <link href="assets/img/logok.png" rel="apple-touch-icon">
-
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-
+  <title>Struktur Organisasi - Hotplate Jago</title>
+  <link href="assets/img/logo.png" rel="icon">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --pertamina-red: #D71920;
-      --pertamina-blue: #0073B2;
-      --pertamina-green: #00A651;
-      --pertamina-dark: #1a1a1a;
-      --pertamina-gray: #f5f5f5;
-    }
-    body { font-family: 'Roboto', sans-serif; color: #333; }
-
-    .header {
-      background-color: var(--pertamina-red) !important;
-      color: #fff;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-      padding: 12px 0;
-    }
-    .header .logo img {
-      height: 60px;
-      width: auto;
-      object-fit: contain;
-      margin-right: 15px; 
-    }
-    .header .sitename { 
-      color: #fff !important; 
-      font-weight: 700; 
-      font-size: 1.5rem; 
-      letter-spacing: 0.5px; 
-      margin: 0; 
-      display: flex;
-      align-items: center;
-    }
-    .header .navmenu a { color: #fff !important; font-weight: 500; font-size: 0.95rem; padding: 8px 12px; }
-    .header .navmenu a:hover, .header .navmenu .active { color: #ffd700 !important; }
-    .header .mobile-nav-toggle { color: #fff; font-size: 1.5rem; }
-
-    .page-title {
-      background: linear-gradient(105deg, rgba(215,25,32,0.95) 0%, rgba(176,21,27,0.95) 100%),
-                  url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: #fff;
-      padding: 100px 0 70px;
-    }
-    .page-title h1 { color: #fff; font-weight: 700; font-size: 2.6rem; margin-bottom: 10px; }
-    .page-title .breadcrumbs ol { list-style: none; padding: 0; margin: 0; display: flex; gap: 8px; flex-wrap: wrap; font-size: 0.9rem; }
-    .page-title .breadcrumbs ol li a { color: #ffe4e6; text-decoration: none; }
-    .page-title .breadcrumbs ol li a:hover { color: #fff; }
-    .page-title .breadcrumbs ol li.current { color: #fff; font-weight: 600; }
-    .page-title .breadcrumbs ol li + li::before { content: "/"; color: rgba(255,255,255,0.6); margin-right: 8px; }
-
-    .section { padding: 70px 0; }
-    .section-title { text-align: center; margin-bottom: 45px; }
-    .section-title p { color: var(--pertamina-red); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 6px; }
-    .section-title h2 { font-weight: 700; color: var(--pertamina-dark); font-size: 2rem; }
-
-    .btn-detail {
-      background: var(--pertamina-red) !important; border-color: var(--pertamina-red) !important;
-      color: #fff !important; padding: 12px 30px; border-radius: 6px; font-weight: 600;
-      text-decoration: none; display: inline-block; transition: 0.3s;
-    }
-    .btn-detail:hover { background: #b0151b !important; border-color: #b0151b !important; color: #fff !important; }
-
-    /* KARTU DEWAN KOMISARIS & DIREKSI (FULL FOTO) */
-    .board-card {
-      position: relative;
-      height: 380px; 
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-      transition: 0.35s;
-      background-color: #e9ecef;
-    }
-    .board-card:hover { 
-      transform: translateY(-6px); 
-      box-shadow: 0 16px 40px rgba(0,0,0,0.2); 
-    }
-
-    .board-photo {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .board-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-    }
-
-    .board-body {
-      position: absolute;
-      bottom: 0; left: 0;
-      width: 100%;
-      padding: 60px 20px 25px 20px;
-      background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0) 100%);
-      text-align: center;
-      color: #fff;
-      z-index: 2;
-    }
-
-    .board-card h4 { 
-      font-size: 1.2rem; 
-      font-weight: 700; 
-      color: #ffffff; 
-      margin-bottom: 8px; 
-    }
-    
-    .board-card .jabatan {
-      display: inline-block;
-      font-size: 0.8rem; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 1px;
-      padding: 5px 14px; border-radius: 20px;
-      color: #fff;
-    }
-    .board-card.komisaris .jabatan { background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(4px); }
-    .board-card.direksi .jabatan { background: var(--pertamina-red); }
-
-    .img-bagan-wrapper {
-      background: #fff;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-      border: 1px solid #eaeaea;
-    }
-
-    /* FOOTER DARK MODE */
-    .footer {
-      background-color: #2b2b2b !important;
-      border-top: 4px solid var(--pertamina-red);
-      padding-top: 50px;
-      color: #e0e0e0;
-    }
-    .footer .widget-heading { 
-      color: #ffffff !important; 
-      font-weight: 700; 
-      font-size: 1.1rem; 
-      margin-bottom: 16px; 
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .footer .widget-heading img {
-      height: 30px;
-      width: auto;
-      object-fit: contain;
-    }
-    .footer a, .footer .widget ul li a { color: #b0b0b0 !important; text-decoration: none; }
-    .footer a:hover, .footer .widget ul li a:hover { color: #ffffff !important; }
-    .footer .social-icons a span { color: #ffffff; }
-    .footer .social-icons a:hover span { color: var(--pertamina-red); }
-    .footer .copyright { border-top: 1px solid #444444; margin-top: 30px; padding: 20px 0; font-size: 0.85rem; }
-    
-    /* PERBAIKAN WARNA TANGGAL FOOTER */
-    .footer .widget .footer-blog-entry .date {
-      color: #888 !important; 
-    }
-
-    @media (max-width: 768px) {
-      .page-title h1 { font-size: 2rem; }
-      .page-title { padding: 80px 0 55px; }
-      .section { padding: 55px 0; }
-      .img-bagan-wrapper { padding: 10px; }
-      .header .logo img { height: 45px; }
-      .header .sitename { font-size: 1.1rem; }
-      .board-card { height: 350px; }
-    }
-  </style>
 </head>
+<body>
 
-<body class="struktur-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      
-      <div class="logo d-flex align-items-center" style="cursor: default;">
-        <img src="assets/img/logok.png" alt="Logo Pertamina">
-        <h1 class="sitename">Pertamina Hulu Energi</h1>
-      </div>
-
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+        <img src="assets/img/logo.png" alt="Logo Hotplate Jago">
+        <h1 class="sitename m-0">Hotplate Jago</h1>
+      </a>
       <nav id="navmenu" class="navmenu">
-        <ul>
+        <ul class="d-flex list-unstyled m-0">
           <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+          <li><a href="menu.html" data-i18n="nav.menu">Menu & Harga</a></li>
           <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
-          <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
-          <li><a href="struktur-organisasi.html" class="active" data-i18n="nav.struktur">Struktur Organisasi</a></li>
-          <li><a href="berita.html" data-i18n="nav.berita">Berita</a></li>
-          <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Maps</a></li>
+          <li><a href="struktur-organisasi.html" class="active" data-i18n="nav.struktur">Struktur</a></li>
+          <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Lokasi</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="id" title="Bahasa Indonesia">ID</button>
-        <button class="lang-btn" data-lang="en" title="English">EN</button>
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </div>
   </header>
 
   <main class="main">
-
     <div class="page-title">
       <div class="container">
         <h1 data-i18n="struktur.page.title">Struktur Organisasi</h1>
@@ -233,366 +47,193 @@
       </div>
     </div>
 
-    <!-- ================= DEWAN KOMISARIS ================= -->
-    <section class="section">
-      <div class="container section-title" data-aos="fade-up">
-        <p data-i18n="struktur.komisaris.tag">Pengawas Perusahaan</p>
-        <h2 data-i18n="struktur.komisaris.title">Dewan Komisaris</h2>
-      </div>
+    <section class="section-custom">
       <div class="container">
-        <div class="row gy-4 justify-content-center">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="board-card komisaris">
-              <div class="board-photo">
-                <img src="assets/img/DENY.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Denny Januar Ali">
+        <div class="section-title" data-aos="fade-up">
+          <span data-i18n="struktur.team.tag">Manajemen & Staf</span>
+          <h2 data-i18n="struktur.team.title">Bagan Organisasi</h2>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="org-chart text-center" data-aos="fade-up">
+          <div class="org-box top-level" style="padding: 20px; border-radius: 8px; display: inline-block; min-width: 200px;">
+            <div class="org-avatar">MW</div>
+            <h4>Mas Wisnu</h4>
+            <span class="position" data-i18n="struktur.owner">Pemilik</span>
+          </div>
+          
+          <div class="org-line-v"></div>
+          <div class="org-line-h"></div>
+          
+          <div class="row justify-content-center mt-0">
+            <div class="col-md-4">
+              <div class="org-line-v-branch"></div>
+              <div class="org-box" style="padding: 20px; border-radius: 8px; background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+                <div class="org-avatar">ME</div>
+                <h4>Mas Eno</h4>
+                <span class="position" data-i18n="struktur.kasir">Kasir</span>
               </div>
-              <div class="board-body">
-                <h4>Denny Januar Ali</h4>
-                <span class="jabatan" data-i18n="struktur.komut">Komisaris Utama & Independen</span>
+            </div>
+            <div class="col-md-4">
+              <div class="org-line-v-branch"></div>
+              <div class="org-box" style="padding: 20px; border-radius: 8px; background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+                <div class="org-avatar">MH</div>
+                <h4>Mas Habib</h4>
+                <span class="position" data-i18n="struktur.koki">Koki</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="org-line-v-branch"></div>
+              <div class="org-box" style="padding: 20px; border-radius: 8px; background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+                <div class="org-avatar">MR</div>
+                <h4>Mas Rafi</h4>
+                <span class="position" data-i18n="struktur.pengadaan">Pengadaan</span>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="board-card komisaris">
-              <div class="board-photo">
-                <img src="assets/img/ANDIKA.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Iggi Haruman Achsien">
-              </div>
-              <div class="board-body">
-                <h4>Iggi Haruman Achsien</h4>
-                <span class="jabatan" data-i18n="struktur.komind">Komisaris Independen</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="board-card komisaris">
-              <div class="board-photo">
-                <img src="assets/img/STELLA.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Stella Christie">
-              </div>
-              <div class="board-body">
-                <h4>Stella Christie</h4>
-                <span class="jabatan" data-i18n="struktur.kom">Komisaris</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="board-card komisaris">
-              <div class="board-photo">
-                <img src="assets/img/NANANG.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Nanang Untung">
-              </div>
-              <div class="board-body">
-                <h4>Nanang Untung</h4>
-                <span class="jabatan" data-i18n="struktur.kom">Komisaris</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="board-card komisaris">
-              <div class="board-photo">
-                <img src="assets/img/WAHYU.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Wahyu Setyawan">
-              </div>
-              <div class="board-body">
-                <h4>Wahyu Setyawan</h4>
-                <span class="jabatan" data-i18n="struktur.kom">Komisaris</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="board-card komisaris">
-              <div class="board-photo">
-                <img src="assets/img/INDRA.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Muhammad Qodari">
-              </div>
-              <div class="board-body">
-                <h4>Muhammad Qodari</h4>
-                <span class="jabatan" data-i18n="struktur.kom">Komisaris</span>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ================= DIREKSI ================= -->
-    <section class="section" style="background:#f9f9f9;">
-      <div class="container section-title" data-aos="fade-up">
-        <p data-i18n="struktur.direksi.tag">Manajemen Puncak</p>
-        <h2 data-i18n="struktur.direksi.title">Dewan Direksi</h2>
-      </div>
+    <section class="section-custom bg-surface">
       <div class="container">
-        <div class="row gy-4 justify-content-center">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="board-card direksi">
-              <div class="board-photo">
-                <img src="assets/img/SUNARYANTO.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Sunaryanto">
+        <div class="section-title" data-aos="fade-up">
+          <span data-i18n="struktur.tugas.tag">Detail Peran</span>
+          <h2 data-i18n="struktur.tugas.title">Tugas & Tanggung Jawab</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="accordion accordion-custom" id="accordionTugas">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                    <i class="bi bi-person-badge me-2"></i> Mas Wisnu — Pemilik
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionTugas">
+                  <div class="accordion-body" data-i18n="struktur.owner.desc">
+                    Bertanggung jawab penuh atas operasional, keuangan, dan arah strategis UMKM Hotplate Jago. Mengawasi jalannya bisnis serta mengambil keputusan penting.
+                  </div>
+                </div>
               </div>
-              <div class="board-body">
-                <h4>Sunaryanto</h4>
-                <span class="jabatan" data-i18n="struktur.dirut">Direktur Utama</span>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                    <i class="bi bi-wallet2 me-2"></i> Mas Eno — Kasir
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionTugas">
+                  <div class="accordion-body" data-i18n="struktur.kasir.desc">
+                    Melayani pembayaran pelanggan, mencatat transaksi harian, dan mengelola laporan penjualan dengan teliti dan ramah.
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="board-card direksi">
-              <div class="board-photo">
-                <img src="assets/img/VIRANO.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Virano Gazi Nasution">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                    <i class="bi bi-fire me-2"></i> Mas Habib — Koki
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionTugas">
+                  <div class="accordion-body" data-i18n="struktur.koki.desc">
+                    Bertugas menyiapkan bahan baku dan memasak semua hidangan hotplate sesuai dengan standar resep untuk menjaga kualitas rasa.
+                  </div>
+                </div>
               </div>
-              <div class="board-body">
-                <h4>Virano Gazi Nasution</h4>
-                <span class="jabatan" data-i18n="struktur.wakil">Wakil Direktur Utama</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="board-card direksi">
-              <div class="board-photo">
-                <img src="assets/img/ASEP.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Asep Samsul Arifin">
-              </div>
-              <div class="board-body">
-                <h4>Asep Samsul Arifin</h4>
-                <span class="jabatan" data-i18n="struktur.eksplorasi">Direktur Eksplorasi</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="board-card direksi">
-              <div class="board-photo">
-                <img src="assets/img/RACHMAT.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Rachmat Hidajat">
-              </div>
-              <div class="board-body">
-                <h4>Rachmat Hidajat</h4>
-                <span class="jabatan" data-i18n="struktur.pengembangan">Direktur Pengembangan dan Produksi</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="board-card direksi">
-              <div class="board-photo">
-                <img src="assets/img/MERY.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Mery Luciawaty">
-              </div>
-              <div class="board-body">
-                <h4>Mery Luciawaty</h4>
-                <span class="jabatan" data-i18n="struktur.strategis">Direktur Perencanaan Strategis, Portofolio & Komersial</span>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                    <i class="bi bi-box-seam me-2"></i> Mas Rafi — Pengadaan
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionTugas">
+                  <div class="accordion-body" data-i18n="struktur.pengadaan.desc">
+                    Memastikan ketersediaan stok bahan baku dan berkoordinasi dengan supplier secara berkala agar operasional dapur tidak terhambat.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="board-card direksi">
-              <div class="board-photo">
-                <img src="assets/img/BAYU.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Bayu Kusuma Dewanto">
-              </div>
-              <div class="board-body">
-                <h4>Bayu Kusuma Dewanto</h4>
-                <span class="jabatan" data-i18n="struktur.keuangan">Direktur Keuangan</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="board-card direksi">
-              <div class="board-photo">
-                <img src="assets/img/DANNIF.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Dannif Danusaputro">
-              </div>
-              <div class="board-body">
-                <h4>Dannif Danusaputro</h4>
-                <span class="jabatan" data-i18n="struktur.investasi">Direktur Investasi & Pengembangan Bisnis</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="board-card direksi">
-              <div class="board-photo">
-                <img src="assets/img/WHISNU.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Whisnu Bahriansyah">
-              </div>
-              <div class="board-body">
-                <h4>Whisnu Bahriansyah</h4>
-                <span class="jabatan" data-i18n="struktur.risiko">Direktur Manajemen Risiko</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="board-card direksi">
-              <div class="board-photo">
-                <img src="assets/img/ERI.jpeg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" alt="Ery Sulistyo Sutikno">
-              </div>
-              <div class="board-body">
-                <h4>Ery Sulistyo Sutikno</h4>
-                <span class="jabatan" data-i18n="struktur.sdm">Direktur SDM & Layanan Korporat</span>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
-
-    <!-- ================= BAGAN ORGANISASI ================= -->
-    <section class="section">
-      <div class="container section-title" data-aos="fade-up">
-        <p data-i18n="struktur.chart.tag">Bagan</p>
-        <h2 data-i18n="struktur.chart.title">Bagan Struktur Organisasi</h2>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="img-bagan-wrapper text-center">
-          <img src="assets/img/struktur.jpeg" alt="Bagan Struktur Organisasi PHE" class="img-fluid">
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CTA ================= -->
-    <section class="section" style="background:#f9f9f9;">
-      <div class="container">
-        <div class="text-center" data-aos="fade-up">
-          <h3 class="mb-3" style="color:var(--pertamina-dark);font-weight:700;" data-i18n="struktur.cta.title">Butuh informasi lebih lanjut?</h3>
-          <p class="text-muted mb-4" data-i18n="struktur.cta.desc">Hubungi kami melalui kanal resmi atau kunjungi kantor pusat.</p>
-          <a href="contact.html" class="btn-detail" data-i18n="struktur.cta.btn">Kontak & Maps</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <footer id="footer" class="footer">
+  <footer class="footer">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">
-              <img src="assets/img/logok.png" alt="Logo Pertamina">
-              Pertamina Hulu Energi
-            </h3>
-            <p class="mb-4" style="font-size:0.9rem;" data-i18n="footer.desc">Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.</p>
-            <p class="mb-0"><a href="about.html" class="btn-outline-detail" style="padding:8px 20px;font-size:0.85rem; border-color: #fff; color: #fff;" data-i18n="footer.selengkapnya">Selengkapnya</a></p>
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <h4 data-i18n="footer.brand">Hotplate Jago</h4>
+          <p class="mb-4" style="max-width: 400px;" data-i18n="footer.desc">Menghadirkan pengalaman kuliner hotplate yang hangat, lezat, dan berkesan di Sleman, Yogyakarta.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/100858672832410/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/hotplate_jago" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/6285225879866" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hotplatejago@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading" data-i18n="footer.nav">Navigasi</h3>
-            <div class="row" style="font-size:0.9rem;">
-              <div class="col-6">
-                <ul class="list-unstyled">
-                  <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
-                  <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
-                  <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="list-unstyled">
-                  <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur Organisasi</a></li>
-                  <li><a href="berita.html" data-i18n="nav.berita">Berita</a></li>
-                  <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Maps</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
-          <div class="widget">
-            <h3 class="widget-heading" data-i18n="footer.berita">Berita Terbaru</h3>
-            <ul class="list-unstyled footer-blog-entry" style="font-size:0.9rem;">
-              <li><span class="d-block date">31 Okt 2026</span><a href="berita.html" data-i18n="footer.berita1">PHE Tingkatkan Produksi</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
-          <div class="widget">
-            <h3 class="widget-heading" data-i18n="footer.terhubung">Terhubung</h3>
-            <ul class="list-unstyled social-icons light mb-3">
-              <li><a href="https://www.facebook.com/pertamina" target="_blank" rel="noopener" title="Facebook"><span class="bi bi-facebook"></span></a></li>
-              <li><a href="https://twitter.com/pertamina" target="_blank" rel="noopener" title="Twitter/X"><span class="bi bi-twitter-x"></span></a></li>
-              <li><a href="https://www.linkedin.com/company/phepertamina/" target="_blank" rel="noopener" title="LinkedIn"><span class="bi bi-linkedin"></span></a></li>
-              <li><a href="https://www.instagram.com/phe.pertamina/" target="_blank" rel="noopener" title="Instagram"><span class="bi bi-instagram"></span></a></li>
-            </ul>
-          </div>
+        <div class="col-lg-4">
+          <h4 data-i18n="footer.nav">Navigasi</h4>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+            <li><a href="menu.html" data-i18n="nav.menu">Menu & Harga</a></li>
+            <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
+            <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur</a></li>
+            <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Lokasi</a></li>
+          </ul>
         </div>
       </div>
-      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename text-white">Pertamina Hulu Energi</strong> <span data-i18n="footer.copyright">Seluruh Hak Cipta Dilindungi</span></p>
-        <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Dimodifikasi untuk PHE</div>
+      <div class="copyright text-center">
+        <p class="mb-0">&copy; 2026 Hotplate Jago. <span data-i18n="footer.copyright">All Rights Reserved.</span></p>
       </div>
     </div>
   </footer>
 
-  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/js/main.js"></script>
-
   <script>
-  const translations = {
-    id: {
-      "nav.beranda":"Beranda","nav.tentang":"Tentang Kami","nav.sejarah":"Sejarah","nav.struktur":"Struktur Organisasi","nav.berita":"Berita","nav.kontak":"Kontak & Maps",
-      "struktur.page.title":"Struktur Organisasi","struktur.breadcrumb":"Struktur Organisasi",
-      "struktur.komisaris.tag":"Pengawas Perusahaan","struktur.komisaris.title":"Dewan Komisaris",
-      "struktur.komut":"Komisaris Utama & Independen","struktur.komind":"Komisaris Independen","struktur.kom":"Komisaris",
-      "struktur.direksi.tag":"Manajemen Puncak","struktur.direksi.title":"Dewan Direksi",
-      "struktur.dirut":"Direktur Utama","struktur.wakil":"Wakil Direktur Utama","struktur.eksplorasi":"Direktur Eksplorasi","struktur.pengembangan":"Direktur Pengembangan dan Produksi","struktur.strategis":"Direktur Perencanaan Strategis, Portofolio & Komersial","struktur.keuangan":"Direktur Keuangan","struktur.investasi":"Direktur Investasi & Pengembangan Bisnis","struktur.risiko":"Direktur Manajemen Risiko","struktur.sdm":"Direktur SDM & Layanan Korporat",
-      "struktur.chart.tag":"Bagan","struktur.chart.title":"Bagan Struktur Organisasi",
-      "struktur.cta.title":"Butuh informasi lebih lanjut?","struktur.cta.desc":"Hubungi kami melalui kanal resmi atau kunjungi kantor pusat.","struktur.cta.btn":"Kontak & Maps",
-      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.","footer.selengkapnya":"Selengkapnya","footer.nav":"Navigasi","footer.berita":"Berita Terbaru","footer.terhubung":"Terhubung","footer.copyright":"Seluruh Hak Cipta Dilindungi","footer.berita1":"PHE Tingkatkan Produksi"
-    },
-    en: {
-      "nav.beranda":"Home","nav.tentang":"About Us","nav.sejarah":"History","nav.struktur":"Organization Structure","nav.berita":"News","nav.kontak":"Contact & Maps",
-      "struktur.page.title":"Organization Structure","struktur.breadcrumb":"Organization Structure",
-      "struktur.komisaris.tag":"Company Supervisor","struktur.komisaris.title":"Board of Commissioners",
-      "struktur.komut":"President Commissioner & Independent","struktur.komind":"Independent Commissioner","struktur.kom":"Commissioner",
-      "struktur.direksi.tag":"Top Management","struktur.direksi.title":"Board of Directors",
-      "struktur.dirut":"President Director","struktur.wakil":"Deputy President Director","struktur.eksplorasi":"Director of Exploration","struktur.pengembangan":"Director of Development and Production","struktur.strategis":"Director of Strategic Planning, Portfolio & Commercial","struktur.keuangan":"Director of Finance","struktur.investasi":"Director of Investment & Business Development","struktur.risiko":"Director of Risk Management","struktur.sdm":"Director of HR & Corporate Services",
-      "struktur.chart.tag":"Chart","struktur.chart.title":"Organization Structure Chart",
-      "struktur.cta.title":"Need more information?","struktur.cta.desc":"Contact us through official channels or visit our head office.","struktur.cta.btn":"Contact & Maps",
-      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Pertamina's Upstream Subholding. Safeguarding national energy resilience.","footer.selengkapnya":"Learn More","footer.nav":"Navigation","footer.berita":"Latest News","footer.terhubung":"Connect","footer.copyright":"All Rights Reserved","footer.berita1":"PHE Boosts Production"
-    }
-  };
+    AOS.init({ duration: 800, easing: 'ease-out', once: true });
+    
+    const translations = {
+      id: {
+        "nav.beranda":"Beranda","nav.menu":"Menu & Harga","nav.tentang":"Tentang Kami","nav.struktur":"Struktur","nav.kontak":"Kontak & Lokasi",
+        "struktur.page.title":"Struktur Organisasi","struktur.breadcrumb":"Struktur Organisasi",
+        "struktur.team.tag":"Manajemen & Staf","struktur.team.title":"Bagan Organisasi",
+        "struktur.tugas.tag":"Detail Peran","struktur.tugas.title":"Tugas & Tanggung Jawab",
+        "struktur.owner":"Pemilik","struktur.owner.desc":"Bertanggung jawab penuh atas operasional, keuangan, dan arah strategis UMKM Hotplate Jago. Mengawasi jalannya bisnis serta mengambil keputusan penting.",
+        "struktur.kasir":"Kasir","struktur.kasir.desc":"Melayani pembayaran pelanggan, mencatat transaksi harian, dan mengelola laporan penjualan dengan teliti dan ramah.",
+        "struktur.koki":"Koki","struktur.koki.desc":"Bertugas menyiapkan bahan baku dan memasak semua hidangan hotplate sesuai dengan standar resep untuk menjaga kualitas rasa.",
+        "struktur.pengadaan":"Pengadaan","struktur.pengadaan.desc":"Memastikan ketersediaan stok bahan baku dan berkoordinasi dengan supplier secara berkala agar operasional dapur tidak terhambat.",
+        "footer.brand":"Hotplate Jago","footer.desc":"Menghadirkan pengalaman kuliner hotplate yang hangat, lezat, dan berkesan di Sleman, Yogyakarta.","footer.nav":"Navigasi","footer.copyright":"All Rights Reserved."
+      },
+      en: {
+        "nav.beranda":"Home","nav.menu":"Menu & Price","nav.tentang":"About Us","nav.struktur":"Structure","nav.kontak":"Contact & Location",
+        "struktur.page.title":"Organization Structure","struktur.breadcrumb":"Organization Structure",
+        "struktur.team.tag":"Management & Staff","struktur.team.title":"Organization Chart",
+        "struktur.tugas.tag":"Role Details","struktur.tugas.title":"Duties & Responsibilities",
+        "struktur.owner":"Owner","struktur.owner.desc":"Fully responsible for the operations, finance, and strategic direction of Hotplate Jago. Supervises the business and makes key decisions.",
+        "struktur.kasir":"Cashier","struktur.kasir.desc":"Serves customer payments, records daily transactions, and manages sales reports carefully and friendly.",
+        "struktur.koki":"Chef","struktur.koki.desc":"Responsible for preparing ingredients and cooking all hotplate dishes according to recipe standards to maintain taste quality.",
+        "struktur.pengadaan":"Procurement","struktur.pengadaan.desc":"Ensures the availability of raw material stock and coordinates with suppliers regularly so kitchen operations are not hampered.",
+        "footer.brand":"Hotplate Jago","footer.desc":"Presenting a warm, delicious, and memorable hotplate culinary experience in Sleman, Yogyakarta.","footer.nav":"Navigation","footer.copyright":"All Rights Reserved."
+      }
+    };
 
-  let currentLang = localStorage.getItem('phe-lang') || 'id';
-
-  function applyLanguage(lang) {
-    currentLang = lang;
-    localStorage.setItem('phe-lang', lang);
-    document.documentElement.setAttribute('lang', lang);
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const tr = translations[lang] && translations[lang][key];
-      if (tr !== undefined) el.innerHTML = tr;
-    });
-
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    applyLanguage(currentLang);
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', e => {
-        e.preventDefault();
-        applyLanguage(btn.dataset.lang);
+    let currentLang = localStorage.getItem('hotplate-lang') || 'id';
+    function applyLanguage(lang) {
+      currentLang = lang; localStorage.setItem('hotplate-lang', lang); document.documentElement.setAttribute('lang', lang);
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n'); const tr = translations[lang] && translations[lang][key]; if (tr !== undefined) el.innerHTML = tr;
       });
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      applyLanguage(currentLang);
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', e => { e.preventDefault(); applyLanguage(btn.dataset.lang); }));
     });
-  });
   </script>
-
 </body>
 </html>

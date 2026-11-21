@@ -3,503 +3,281 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Pertamina Hulu Energi - Subholding Upstream</title>
-  <meta name="description" content="PT Pertamina Hulu Energi (PHE), Subholding Upstream Pertamina.">
-
-  <link href="assets/img/logok.png" rel="icon">
-  <link href="assets/img/logok.png" rel="apple-touch-icon">
-
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
-
+  <title>Hotplate Jago - Sensasi Kuliner Hotplate di Sleman</title>
+  <link href="assets/img/logo.png" rel="icon">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
   <link href="assets/css/main.css" rel="stylesheet">
-
   <style>
-    .header .logo img {
-      height: 60px;
-      width: auto;
-      object-fit: contain;
-      margin-right: 15px;
-    }
-
-    .header .logo h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #ffffff;
-      line-height: 1.2;
-      display: flex;
-      align-items: center;
-      margin-bottom: 0;
-    }
-
-    .hero-phe {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      background: linear-gradient(105deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 100%),
-                  url('assets/img/bg.jpg') center center / cover no-repeat;
-      padding: 180px 0 120px;
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-phe::after {
-      display: none;
-    }
-
-    .hero-phe .container {
-      z-index: 2;
-    }
-
-    .direksi-preview .avatar {
-      overflow: hidden;
-    }
-
-    .direksi-preview .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-    }
-
-    .footer {
-      background-color: #2b2b2b !important;
-      border-top: 4px solid var(--pertamina-red);
-      padding-top: 50px;
-      color: #e0e0e0;
-    }
-
-    .footer .widget-heading {
-      color: #ffffff !important;
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .footer .widget-heading img {
-      height: 30px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .footer a,
-    .footer .widget ul li a {
-      color: #b0b0b0 !important;
-      text-decoration: none;
-    }
-
-    .footer a:hover,
-    .footer .widget ul li a:hover {
-      color: #ffffff !important;
-    }
-
-    .footer .social-icons a span {
-      color: #ffffff;
-    }
-
-    .footer .social-icons a:hover span {
-      color: var(--pertamina-red);
-    }
-
-    .footer .copyright {
-      border-top: 1px solid #444444;
-      margin-top: 30px;
-      padding: 20px 0;
-      font-size: 0.85rem;
-    }
-
-    .footer .widget .footer-blog-entry .date {
-      color: #888 !important;
-    }
-
-    @media (max-width: 768px) {
-      .hero-phe {
-        padding: 120px 0 90px;
-        min-height: 60vh;
-      }
-      .header .logo h1 {
-        font-size: 1.1rem;
-      }
-      .header .logo img {
-        height: 45px;
-      }
-    }
+    .kontak-link { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; text-decoration: none; color: var(--text-secondary); transition: all 0.3s ease; }
+    .kontak-link:hover { color: var(--brand-fire-hover) !important; }
+    .kontak-link i { font-size: 1.2rem; color: var(--brand-fire-hover); transition: all 0.3s ease; }
+    .kontak-link:hover i { color: #FFF; text-shadow: 0 0 10px var(--brand-fire); }
   </style>
 </head>
+<body>
 
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logok.png" alt="Logo Pertamina">
-        <h1 class="sitename">Pertamina Hulu Energi</h1>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+        <img src="assets/img/logo.png" alt="Logo Hotplate Jago">
+        <h1 class="sitename m-0">Hotplate Jago</h1>
       </a>
-
       <nav id="navmenu" class="navmenu">
-        <ul>
+        <ul class="d-flex list-unstyled m-0">
           <li><a href="index.html" class="active" data-i18n="nav.beranda">Beranda</a></li>
+          <li><a href="menu.html" data-i18n="nav.menu">Menu & Harga</a></li>
           <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
-          <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
-          <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur Organisasi</a></li>
-          <li><a href="berita.html" data-i18n="nav.berita">Berita</a></li>
-          <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Maps</a></li>
+          <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur</a></li>
+          <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Lokasi</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="id" title="Bahasa Indonesia">ID</button>
-        <button class="lang-btn" data-lang="en" title="English">EN</button>
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </div>
   </header>
 
-  <main class="main">
-
-    <section id="beranda" class="hero-phe">
-      <div class="container position-relative z-2">
-        <h1 data-aos="fade-up" data-i18n="hero.title">Menjaga Ketahanan Energi Nasional</h1>
-        <p data-aos="fade-up" data-aos-delay="100" data-i18n="hero.desc">
-          PT Pertamina Hulu Energi (PHE) sebagai Subholding Upstream Pertamina mengelola portofolio hulu migas di dalam dan luar negeri.
-        </p>
-        <a href="#tentang-kami" class="btn-hero" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.btn">Jelajahi</a>
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="text-uppercase fw-bold" data-aos="fade-up" data-i18n="hero.est">Est. 2021 &middot; Sleman, Yogyakarta</div>
+            <h1 data-aos="fade-up" data-aos-delay="100" data-i18n="hero.title">Sensasi Makan<br>di Atas Piring Panas</h1>
+            <p data-aos="fade-up" data-aos-delay="200" data-i18n="hero.desc">Nikmati beragam pilihan menu hotplate dengan daging pilihan, bumbu meresap, dan saus favorit. Disajikan selagi hangat, lengkap dengan nasi free refill sepuasnya.</p>
+            
+            <div class="d-flex align-items-center gap-3 flex-wrap mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="#menu" class="btn-primary" data-i18n="hero.btn">Jelajahi Menu</a>
+              <a href="https://gofood.co.id/yogyakarta/restaurant/hotplate-jago-jl-selokan-mataram-caturtunggal-22e6e5b0-0b4a-4e82-a0d1-c5b93fdc900f" target="_blank" class="btn-gofood">
+                <i class="bi bi-bag-check-fill me-2"></i> <span data-i18n="hero.btn_gofood">GoFood</span>
+              </a>
+              <a href="https://shopee.co.id/universal-link/now-food/shop/20917873?deep_and_deferred=1&shareChannel=whatsapp" target="_blank" class="btn-shopeefood">
+                <i class="bi bi-shop me-2"></i> <span data-i18n="hero.btn_shopeefood">ShopeeFood</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="tentang-kami" class="section">
-      <div class="container section-title" data-aos="fade-up">
-        <p data-i18n="idx.about.tag">Profil Perusahaan</p>
-        <h2 data-i18n="idx.about.title">Tentang Kami</h2>
-      </div>
-
+    <section id="menu" class="section-custom">
       <div class="container">
-        <div class="row gy-5 align-items-center">
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="summary-card">
-              <i class="bi bi-building icon-lg"></i>
-              <h3 data-i18n="idx.about.card">Subholding Upstream Pertamina</h3>
-              <p data-i18n="idx.about.desc">
-                PHE merupakan anak perusahaan PT Pertamina (Persero) yang mengelola 58 anak perusahaan, 6 perusahaan patungan, dan 2 perusahaan afiliasi di sektor hulu migas.
-              </p>
-              <div class="mt-4">
-                <a href="about.html" class="btn-detail" data-i18n="idx.about.btn">Lihat Detail Perusahaan</a>
+        <div class="section-title" data-aos="fade-up">
+          <span data-i18n="menu.tag">Pilihan Terbaik</span>
+          <h2 data-i18n="menu.title">Menu Andalan</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="menu-card">
+              <img src="assets/img/seafood.jpg" alt="Hotplate Seafood">
+              <div class="menu-card-body">
+                <h3 class="menu-card-title" data-i18n="menu.s1.title">Hotplate Seafood</h3>
+                <p class="menu-card-desc" data-i18n="menu.s1.desc">Sajian seafood segar dengan bumbu rahasia, dipanggang sempurna di atas hotplate.</p>
+                <div class="menu-card-price" data-i18n="menu.s1.price">Rp 29.000</div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="row g-3">
-              <div class="col-6"><div class="stat-box"><span class="number purecounter" data-purecounter-start="0" data-purecounter-end="58" data-purecounter-duration="1"></span><span class="label" data-i18n="idx.about.stat1">Anak Perusahaan</span></div></div>
-              <div class="col-6"><div class="stat-box"><span class="number purecounter" data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"></span><span class="label" data-i18n="idx.about.stat2">Perusahaan Patungan</span></div></div>
-              <div class="col-6"><div class="stat-box"><span class="number purecounter" data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1"></span><span class="label" data-i18n="idx.about.stat3">WK Domestik</span></div></div>
-              <div class="col-6"><div class="stat-box"><span class="number purecounter" data-purecounter-start="0" data-purecounter-end="27" data-purecounter-duration="1"></span><span class="label" data-i18n="idx.about.stat4">WK Internasional</span></div></div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="menu-card">
+              <img src="assets/img/sapi.jpg" alt="Hotplate Sapi">
+              <div class="menu-card-body">
+                <h3 class="menu-card-title" data-i18n="menu.s2.title">Hotplate Sapi Lada Hitam</h3>
+                <p class="menu-card-desc" data-i18n="menu.s2.desc">Daging sapi empuk berpadu dengan saus lada hitam aromatik yang kaya rasa.</p>
+                <div class="menu-card-price" data-i18n="menu.s2.price">Rp 25.000</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="menu-card">
+              <img src="assets/img/ceker.jpg" alt="Hotplate Ceker">
+              <div class="menu-card-body">
+                <h3 class="menu-card-title" data-i18n="menu.s3.title">Hotplate Ceker Terong</h3>
+                <p class="menu-card-desc" data-i18n="menu.s3.desc">Perpaduan ceker dan terong dengan saus pilihan, cocok untuk pecinta rasa pedas.</p>
+                <div class="menu-card-price" data-i18n="menu.s3.price">Rp 13.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+          <a href="menu.html" class="btn-outline" data-i18n="menu.btn">Lihat Semua Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-custom bg-surface">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="info-box">
+              <h3><i class="bi bi-shop me-2"></i> <span data-i18n="info.sejarah.title">Sejarah Singkat</span></h3>
+              <p data-i18n="info.sejarah.p1">Hotplate Jago berdiri sejak tahun 2021, didirikan oleh Mas Wisnu dari kecintaannya terhadap kuliner hotplate. Berawal dari keinginan menyajikan hidangan yang nikmat dengan sensasi berbeda, Hotplate Jago hadir dengan menu yang disajikan langsung di atas piring panas, sehingga tetap hangat dan menggugah selera saat dinikmati.</p>
+              <p data-i18n="info.sejarah.p2">Mengusung slogan <strong>"Panas, Lezat, Bikin Nagih"</strong>, Hotplate Jago selalu berusaha menghadirkan hidangan dengan bahan-bahan segar, cita rasa yang lezat, dan pelayanan yang ramah.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="info-box">
+              <h3><i class="bi bi-people me-2"></i> <span data-i18n="info.struktur.title">Pengelola Hotplate Jago</span></h3>
+              <p data-i18n="info.struktur.desc">Hotplate Jago dikelola oleh orang-orang yang memiliki peran masing-masing dalam menjalankan kegiatan operasional sehari-hari.</p>
+              <ul class="mb-4">
+                <li><i class="bi bi-person-badge"></i> <strong>Mas Wisnu</strong> — <span data-i18n="info.struktur.owner">Pemilik</span></li>
+                <li><i class="bi bi-wallet2"></i> <strong>Mas Eno</strong> — <span data-i18n="info.struktur.kasir">Kasir</span></li>
+                <li><i class="bi bi-fire"></i> <strong>Mas Habib</strong> — <span data-i18n="info.struktur.koki">Koki</span></li>
+                <li><i class="bi bi-box-seam"></i> <strong>Mas Rafi</strong> — <span data-i18n="info.struktur.pengadaan">Pengadaan</span></li>
+              </ul>
+              <a href="struktur-organisasi.html" class="btn-outline" style="padding: 10px 24px; font-size: 0.85rem;" data-i18n="info.struktur.btn">Lihat Detail Struktur</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="sejarah" class="section" style="background:#f9f9f9;">
-      <div class="container section-title" data-aos="fade-up">
-        <p data-i18n="idx.sejarah.tag">Perjalanan Perusahaan</p>
-        <h2 data-i18n="idx.sejarah.title">Sejarah</h2>
-      </div>
-
+    <section id="contact" class="section-custom">
       <div class="container">
-        <div class="mini-timeline" data-aos="fade-up">
-          <div class="mini-step">
-            <div class="dot">1989</div>
-            <h5 data-i18n="idx.sejarah.s1.title">PT Aroma Operations Services</h5>
-            <p data-i18n="idx.sejarah.s1.desc">Berdiri 17 November 1989 untuk mendukung kilang petrokimia Cilacap.</p>
-          </div>
-          <div class="mini-step">
-            <div class="dot">2002</div>
-            <h5 data-i18n="idx.sejarah.s2.title">PT Pertahulu Energy</h5>
-            <p data-i18n="idx.sejarah.s2.desc">Berganti nama seiring pemisahan usaha hulu-hilir Pertamina.</p>
-          </div>
-          <div class="mini-step">
-            <div class="dot">2007</div>
-            <h5 data-i18n="idx.sejarah.s3.title">PT Pertamina Hulu Energi</h5>
-            <p data-i18n="idx.sejarah.s3.desc">Nama resmi PHE disahkan melalui RUPS 29 Juni 2007.</p>
-          </div>
-          <div class="mini-step">
-            <div class="dot">2021</div>
-            <h5 data-i18n="idx.sejarah.s4.title">Subholding Upstream</h5>
-            <p data-i18n="idx.sejarah.s4.desc">PHE mengambil alih 11 anak perusahaan hulu dan beroperasi sebagai Subholding.</p>
-          </div>
+        <div class="section-title" data-aos="fade-up">
+          <span data-i18n="contact.tag">Kunjungi Kami</span>
+          <h2 data-i18n="contact.title">Lokasi & Kontak</h2>
+          <div class="divider"></div>
         </div>
-        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="100">
-          <a href="sejarah.html" class="btn-outline-detail" data-i18n="idx.sejarah.btn">Lihat Sejarah Lengkap</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="struktur-organisasi" class="section">
-      <div class="container section-title" data-aos="fade-up">
-        <p data-i18n="idx.struktur.tag">Manajemen</p>
-        <h2 data-i18n="idx.struktur.title">Struktur Organisasi</h2>
-      </div>
-
-      <div class="container">
-        <p class="text-center text-muted mb-5" data-aos="fade-up" data-i18n="idx.struktur.desc">
-          Beberapa jajaran Direksi PT Pertamina Hulu Energi (Subholding Upstream).
-        </p>
-        <div class="row gy-4 justify-content-center">
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up">
-            <div class="direksi-preview">
-              <div class="avatar"><img src="assets/img/SUNARYANTO.jpeg" alt="Sunaryanto"></div>
-              <h5>Sunaryanto</h5>
-              <span data-i18n="struktur.dirut">Direktur Utama</span>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="direksi-preview">
-              <div class="avatar"><img src="assets/img/VIRANO.jpeg" alt="Virano Gazi Nasution"></div>
-              <h5>Virano Gazi Nasution</h5>
-              <span data-i18n="struktur.wakil">Wakil Direktur Utama</span>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="direksi-preview">
-              <div class="avatar"><img src="assets/img/ASEP.jpeg" alt="Asep Samsul Arifin"></div>
-              <h5>Asep Samsul Arifin</h5>
-              <span data-i18n="struktur.eksplorasi">Direktur Eksplorasi</span>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="direksi-preview">
-              <div class="avatar"><img src="assets/img/MERY.jpeg" alt="Mery Luciawaty"></div>
-              <h5>Mery Luciawaty</h5>
-              <span data-i18n="struktur.strategis">Direktur Perencanaan Strategis</span>
-            </div>
-          </div>
-
-        </div>
-        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
-          <a href="struktur-organisasi.html" class="btn-detail" data-i18n="idx.struktur.btn">Lihat Struktur Lengkap</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="kontak" class="section" style="background:#f9f9f9;">
-      <div class="container section-title" data-aos="fade-up">
-        <p data-i18n="idx.kontak.tag">Hubungi Kami</p>
-        <h2 data-i18n="idx.kontak.title">Kontak & Maps</h2>
-      </div>
-
-      <div class="container">
-        <div class="row gy-5 align-items-center">
+        
+        <div class="row g-4 align-items-stretch">
           <div class="col-lg-5" data-aos="fade-up">
-            <div class="contact-preview">
-              <div class="item">
-                <i class="bi bi-geo-alt-fill"></i>
-                <div>
-                  <h6 data-i18n="idx.kontak.kantor">Kantor Pusat</h6>
-                  <p data-i18n="idx.kontak.alamat">PHE Tower, Jl. TB Simatupang Kav. 99, Jakarta Selatan 12520</p>
-                </div>
-              </div>
-              <div class="item">
-                <i class="bi bi-telephone-fill"></i>
-                <div>
-                  <h6 data-i18n="idx.kontak.telepon">Telepon</h6>
-                  <p><a href="tel:+622129547000" style="color: inherit; text-decoration: none;">+62 21 2954 7000</a></p>
-                </div>
-              </div>
-              <div class="item">
-                <i class="bi bi-envelope-fill"></i>
-                <div>
-                  <h6 data-i18n="idx.kontak.email">Email</h6>
-                  <p><a href="mailto:pcc135@pertamina.com" style="color: inherit; text-decoration: none;">pcc135@pertamina.com</a></p>
-                </div>
-              </div>
-              <div class="mt-4">
-                <a href="contact.html" class="btn-detail" data-i18n="idx.kontak.btn">Lihat Kontak Lengkap</a>
+            <div class="mb-4">
+              <h4 class="mb-2" data-i18n="contact.alamat.title">Alamat</h4>
+              <p data-i18n="contact.alamat.desc">Jl. Selokan Mataram, Santren, Caturtunggal, Kec. Depok, Sleman, DIY 55281</p>
+            </div>
+            <div class="mb-4">
+              <h4 class="mb-2" data-i18n="contact.jam.title">Jam Buka</h4>
+              <p data-i18n="contact.jam.desc">Setiap Hari: 12.00 - 21.30 WIB<br>(Jumat: 14.00 - 21.30 WIB)</p>
+            </div>
+            <div class="mb-4">
+              <h4 class="mb-2" data-i18n="contact.wa.title">Kontak</h4>
+              <div class="mt-3">
+                <a href="https://wa.me/6285225879866" target="_blank" class="kontak-link">
+                  <i class="bi bi-whatsapp"></i> 0852-2587-9866
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hotplatejago@gmail.com" target="_blank" class="kontak-link">
+                  <i class="bi bi-envelope-fill"></i> hotplatejago@gmail.com
+                </a>
+                <a href="https://instagram.com/hotplate_jago" target="_blank" class="kontak-link">
+                  <i class="bi bi-instagram"></i> @hotplate_jago
+                </a>
+                <a href="https://www.facebook.com/100858672832410/" target="_blank" class="kontak-link">
+                  <i class="bi bi-facebook"></i> Hotplate Jago
+                </a>
               </div>
             </div>
           </div>
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-            <div class="maps-preview">
-              <iframe src="https://www.google.com/maps?q=PHE+Tower+Jl.+TB+Simatupang+Kav.+99+Jakarta&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="PHE Tower"></iframe>
+            <div class="maps-full">
+              <iframe src="https://www.google.com/maps?q=Jalan+Selokan+Mataram,+Santren,+Caturtunggal,+Kecamatan+Depok,+Sleman,+Yogyakarta&output=embed" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
         </div>
+        
       </div>
     </section>
-
   </main>
 
-  <footer id="footer" class="footer">
+  <footer class="footer">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading">
-              <img src="assets/img/logok.png" alt="Logo Pertamina">
-              Pertamina Hulu Energi
-            </h3>
-            <p class="mb-4" style="font-size:0.9rem;" data-i18n="footer.desc">Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.</p>
-            <p class="mb-0"><a href="about.html" class="btn-outline-detail" style="padding:8px 20px;font-size:0.85rem; border-color: #fff; color: #fff;" data-i18n="footer.selengkapnya">Selengkapnya</a></p>
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <h4 data-i18n="footer.brand">Hotplate Jago</h4>
+          <p class="mb-4" style="max-width: 400px;" data-i18n="footer.desc">Menghadirkan pengalaman kuliner hotplate yang hangat, lezat, dan berkesan di Sleman, Yogyakarta.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/100858672832410/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/hotplate_jago" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/6285225879866" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hotplatejago@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
-          <div class="widget">
-            <h3 class="widget-heading" data-i18n="footer.nav">Navigasi</h3>
-            <div class="row" style="font-size:0.9rem;">
-              <div class="col-6">
-                <ul class="list-unstyled">
-                  <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
-                  <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
-                  <li><a href="sejarah.html" data-i18n="nav.sejarah">Sejarah</a></li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="list-unstyled">
-                  <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur Organisasi</a></li>
-                  <li><a href="berita.html" data-i18n="nav.berita">Berita</a></li>
-                  <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Maps</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
-          <div class="widget">
-            <h3 class="widget-heading" data-i18n="footer.berita">Berita Terbaru</h3>
-            <ul class="list-unstyled footer-blog-entry" style="font-size:0.9rem;">
-              <li><span class="d-block date">31 Okt 2026</span><a href="berita.html" data-i18n="footer.berita1">PHE Tingkatkan Produksi</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5">
-          <div class="widget">
-            <h3 class="widget-heading" data-i18n="footer.terhubung">Terhubung</h3>
-            <ul class="list-unstyled social-icons light mb-3">
-              <li><a href="https://www.facebook.com/pertamina" target="_blank" rel="noopener" title="Facebook"><span class="bi bi-facebook"></span></a></li>
-              <li><a href="https://twitter.com/pertamina" target="_blank" rel="noopener" title="Twitter/X"><span class="bi bi-twitter-x"></span></a></li>
-              <li><a href="https://www.linkedin.com/company/phepertamina/" target="_blank" rel="noopener" title="LinkedIn"><span class="bi bi-linkedin"></span></a></li>
-              <li><a href="https://www.instagram.com/phe.pertamina/" target="_blank" rel="noopener" title="Instagram"><span class="bi bi-instagram"></span></a></li>
-            </ul>
-          </div>
+        <div class="col-lg-4">
+          <h4 data-i18n="footer.nav">Navigasi</h4>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html" data-i18n="nav.beranda">Beranda</a></li>
+            <li><a href="menu.html" data-i18n="nav.menu">Menu & Harga</a></li>
+            <li><a href="about.html" data-i18n="nav.tentang">Tentang Kami</a></li>
+            <li><a href="struktur-organisasi.html" data-i18n="nav.struktur">Struktur</a></li>
+            <li><a href="contact.html" data-i18n="nav.kontak">Kontak & Lokasi</a></li>
+          </ul>
         </div>
       </div>
-      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename text-white">Pertamina Hulu Energi</strong> <span data-i18n="footer.copyright">Seluruh Hak Cipta Dilindungi</span></p>
-        <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Dimodifikasi untuk PHE</div>
+      <div class="copyright text-center">
+        <p class="mb-0">&copy; 2026 Hotplate Jago. <span data-i18n="footer.copyright">All Rights Reserved.</span></p>
       </div>
     </div>
   </footer>
 
-  <a href="#beranda" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <script src="assets/js/main.js"></script>
-
   <script>
-  const translations = {
-    id: {
-      "nav.beranda":"Beranda","nav.tentang":"Tentang Kami","nav.sejarah":"Sejarah","nav.struktur":"Struktur Organisasi","nav.berita":"Berita","nav.kontak":"Kontak & Maps",
-      "hero.title":"Menjaga Ketahanan Energi Nasional",
-      "hero.desc":"PT Pertamina Hulu Energi (PHE) sebagai Subholding Upstream Pertamina mengelola portofolio hulu migas di dalam dan luar negeri.",
-      "hero.btn":"Jelajahi",
-      "idx.about.tag":"Profil Perusahaan","idx.about.title":"Tentang Kami","idx.about.card":"Subholding Upstream Pertamina",
-      "idx.about.desc":"PHE merupakan anak perusahaan PT Pertamina (Persero) yang mengelola 58 anak perusahaan, 6 perusahaan patungan, dan 2 perusahaan afiliasi di sektor hulu migas.",
-      "idx.about.btn":"Lihat Detail Perusahaan","idx.about.stat1":"Anak Perusahaan","idx.about.stat2":"Perusahaan Patungan","idx.about.stat3":"WK Domestik","idx.about.stat4":"WK Internasional",
-      "idx.sejarah.tag":"Perjalanan Perusahaan","idx.sejarah.title":"Sejarah","idx.sejarah.btn":"Lihat Sejarah Lengkap",
-      "idx.sejarah.s1.title":"PT Aroma Operations Services","idx.sejarah.s1.desc":"Berdiri 17 November 1989 untuk mendukung kilang petrokimia Cilacap.",
-      "idx.sejarah.s2.title":"PT Pertahulu Energy","idx.sejarah.s2.desc":"Berganti nama seiring pemisahan usaha hulu-hilir Pertamina.",
-      "idx.sejarah.s3.title":"PT Pertamina Hulu Energi","idx.sejarah.s3.desc":"Nama resmi PHE disahkan melalui RUPS 29 Juni 2007.",
-      "idx.sejarah.s4.title":"Subholding Upstream","idx.sejarah.s4.desc":"PHE mengambil alih 11 anak perusahaan hulu dan beroperasi sebagai Subholding.",
-      "idx.struktur.tag":"Manajemen","idx.struktur.title":"Struktur Organisasi","idx.struktur.desc":"Beberapa jajaran Direksi PT Pertamina Hulu Energi (Subholding Upstream).","idx.struktur.btn":"Lihat Struktur Lengkap",
-      "idx.kontak.tag":"Hubungi Kami","idx.kontak.title":"Kontak & Maps","idx.kontak.btn":"Lihat Kontak Lengkap","idx.kontak.kantor":"Kantor Pusat","idx.kontak.alamat":"PHE Tower, Jl. TB Simatupang Kav. 99, Jakarta Selatan 12520","idx.kontak.telepon":"Telepon","idx.kontak.email":"Email",
-      "struktur.dirut":"Direktur Utama","struktur.wakil":"Wakil Direktur Utama","struktur.eksplorasi":"Direktur Eksplorasi","struktur.strategis":"Direktur Perencanaan Strategis",
-      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Subholding Upstream Pertamina. Menjaga ketahanan energi nasional.","footer.selengkapnya":"Selengkapnya","footer.nav":"Navigasi","footer.berita":"Berita Terbaru","footer.terhubung":"Terhubung","footer.copyright":"Seluruh Hak Cipta Dilindungi","footer.berita1":"PHE Tingkatkan Produksi"
-    },
-    en: {
-      "nav.beranda":"Home","nav.tentang":"About Us","nav.sejarah":"History","nav.struktur":"Organization Structure","nav.berita":"News","nav.kontak":"Contact & Maps",
-      "hero.title":"Safeguarding National Energy Resilience",
-      "hero.desc":"PT Pertamina Hulu Energi (PHE), as Pertamina's Upstream Subholding, manages upstream oil and gas portfolios domestically and internationally.",
-      "hero.btn":"Explore",
-      "idx.about.tag":"Company Profile","idx.about.title":"About Us","idx.about.card":"Pertamina's Upstream Subholding",
-      "idx.about.desc":"PHE is a subsidiary of PT Pertamina (Persero) that manages 58 subsidiaries, 6 joint ventures, and 2 affiliated companies in the upstream oil and gas sector.",
-      "idx.about.btn":"View Company Details","idx.about.stat1":"Subsidiaries","idx.about.stat2":"Joint Ventures","idx.about.stat3":"Domestic WK","idx.about.stat4":"International WK",
-      "idx.sejarah.tag":"Company Journey","idx.sejarah.title":"History","idx.sejarah.btn":"View Full History",
-      "idx.sejarah.s1.title":"PT Aroma Operations Services","idx.sejarah.s1.desc":"Established November 17, 1989 to support the Cilacap petrochemical refinery.",
-      "idx.sejarah.s2.title":"PT Pertahulu Energy","idx.sejarah.s2.desc":"Renamed following Pertamina's upstream-downstream separation.",
-      "idx.sejarah.s3.title":"PT Pertamina Hulu Energi","idx.sejarah.s3.desc":"Official PHE name ratified at the General Meeting on June 29, 2007.",
-      "idx.sejarah.s4.title":"Upstream Subholding","idx.sejarah.s4.desc":"PHE took over 11 upstream subsidiaries and operates as Subholding.",
-      "idx.struktur.tag":"Management","idx.struktur.title":"Organization Structure","idx.struktur.desc":"Several members of the Board of Directors of PT Pertamina Hulu Energi.","idx.struktur.btn":"View Full Structure",
-      "idx.kontak.tag":"Contact Us","idx.kontak.title":"Contact & Maps","idx.kontak.btn":"View Full Contact","idx.kontak.kantor":"Head Office","idx.kontak.alamat":"PHE Tower, Jl. TB Simatupang Kav. 99, South Jakarta 12520","idx.kontak.telepon":"Phone","idx.kontak.email":"Email",
-      "struktur.dirut":"President Director","struktur.wakil":"Deputy President Director","struktur.eksplorasi":"Director of Exploration","struktur.strategis":"Director of Strategic Planning",
-      "footer.brand":"Pertamina Hulu Energi","footer.desc":"Pertamina's Upstream Subholding. Safeguarding national energy resilience.","footer.selengkapnya":"Learn More","footer.nav":"Navigation","footer.berita":"Latest News","footer.terhubung":"Connect","footer.copyright":"All Rights Reserved","footer.berita1":"PHE Boosts Production"
-    }
-  };
+    AOS.init({ duration: 800, easing: 'ease-out', once: true });
 
-  let currentLang = localStorage.getItem('phe-lang') || 'id';
-
-  function applyLanguage(lang) {
-    currentLang = lang;
-    localStorage.setItem('phe-lang', lang);
-    document.documentElement.setAttribute('lang', lang);
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const tr = translations[lang] && translations[lang][key];
-      if (tr !== undefined) el.innerHTML = tr;
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) { scrollTopBtn.classList.add('active'); } 
+      else { scrollTopBtn.classList.remove('active'); }
     });
+    scrollTopBtn.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    applyLanguage(currentLang);
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', e => {
-        e.preventDefault();
-        applyLanguage(btn.dataset.lang);
+    const translations = {
+      id: {
+        "nav.beranda":"Beranda","nav.tentang":"Tentang Kami","nav.menu":"Menu & Harga","nav.struktur":"Struktur","nav.kontak":"Kontak & Lokasi",
+        "hero.est":"Est. 2021 &middot; Sleman, Yogyakarta",
+        "hero.title":"Sensasi Makan<br>di Atas Piring Panas",
+        "hero.desc":"Nikmati beragam pilihan menu hotplate dengan daging pilihan, bumbu meresap, dan saus favorit. Disajikan selagi hangat, lengkap dengan nasi free refill sepuasnya.",
+        "hero.btn":"Jelajahi Menu", "hero.btn_gofood":"GoFood", "hero.btn_shopeefood":"ShopeeFood",
+        "menu.tag":"Pilihan Terbaik", "menu.title":"Menu Andalan", "menu.btn":"Lihat Semua Menu",
+        "menu.s1.title":"Hotplate Seafood","menu.s1.price":"Rp 29.000","menu.s1.desc":"Sajian seafood segar dengan bumbu rahasia, dipanggang sempurna di atas hotplate.",
+        "menu.s2.title":"Hotplate Sapi Lada Hitam","menu.s2.price":"Rp 25.000","menu.s2.desc":"Daging sapi empuk berpadu dengan saus lada hitam aromatik yang kaya rasa.",
+        "menu.s3.title":"Hotplate Ceker Terong","menu.s3.price":"Rp 13.000","menu.s3.desc":"Perpaduan ceker dan terong dengan saus pilihan, cocok untuk pecinta rasa pedas.",
+        "info.sejarah.title":"Sejarah Singkat",
+        "info.sejarah.p1":"Hotplate Jago berdiri sejak tahun 2021, didirikan oleh Mas Wisnu dari kecintaannya terhadap kuliner hotplate. Berawal dari keinginan menyajikan hidangan yang nikmat dengan sensasi berbeda, Hotplate Jago hadir dengan menu yang disajikan langsung di atas piring panas, sehingga tetap hangat dan menggugah selera saat dinikmati.",
+        "info.sejarah.p2":"Mengusung slogan <strong>\"Panas, Lezat, Bikin Nagih\"</strong>, Hotplate Jago selalu berusaha menghadirkan hidangan dengan bahan-bahan segar, cita rasa yang lezat, dan pelayanan yang ramah.",
+        "info.struktur.title":"Pengelola Hotplate Jago","info.struktur.desc":"Hotplate Jago dikelola oleh orang-orang yang memiliki peran masing-masing dalam menjalankan kegiatan operasional sehari-hari.",
+        "info.struktur.owner":"Pemilik","info.struktur.kasir":"Kasir","info.struktur.koki":"Koki","info.struktur.pengadaan":"Pengadaan", "info.struktur.btn":"Lihat Detail Struktur",
+        "contact.tag":"Kunjungi Kami","contact.title":"Lokasi & Kontak","contact.alamat.title":"Alamat","contact.alamat.desc":"Jl. Selokan Mataram, Santren, Caturtunggal, Kec. Depok, Sleman, DIY 55281",
+        "contact.jam.title":"Jam Buka","contact.jam.desc":"Setiap Hari: 12.00 - 21.30 WIB<br>(Jumat: 14.00 - 21.30 WIB)","contact.wa.title":"Kontak",
+        "footer.brand":"Hotplate Jago","footer.desc":"Menghadirkan pengalaman kuliner hotplate yang hangat, lezat, dan berkesan di Sleman, Yogyakarta.","footer.nav":"Navigasi","footer.copyright":"All Rights Reserved."
+      },
+      en: {
+        "nav.beranda":"Home","nav.tentang":"About Us","nav.menu":"Menu & Price","nav.struktur":"Structure","nav.kontak":"Contact & Location",
+        "hero.est":"Est. 2021 &middot; Sleman, Yogyakarta",
+        "hero.title":"Dining Sensation<br>on a Hot Plate",
+        "hero.desc":"Enjoy a variety of hotplate menu choices with selected meat, infused spices, and favorite sauces. Served warm, complete with unlimited free refill rice.",
+        "hero.btn":"Explore Menu", "hero.btn_gofood":"GoFood", "hero.btn_shopeefood":"ShopeeFood",
+        "menu.tag":"Best Choices", "menu.title":"Signature Menu", "menu.btn":"View All Menus",
+        "menu.s1.title":"Seafood Hotplate","menu.s1.price":"Rp 29,000","menu.s1.desc":"Fresh seafood with secret spices, perfectly grilled on a hotplate.",
+        "menu.s2.title":"Black Pepper Beef Hotplate","menu.s2.price":"Rp 25,000","menu.s2.desc":"Tender beef combined with rich aromatic black pepper sauce.",
+        "menu.s3.title":"Chicken Feet & Eggplant Hotplate","menu.s3.price":"Rp 13,000","menu.s3.desc":"A blend of chicken feet and eggplant with selected sauce, perfect for spicy lovers.",
+        "info.sejarah.title":"Brief History",
+        "info.sejarah.p1":"Hotplate Jago was established in 2021, founded by Mas Wisnu out of his love for hotplate culinary. Starting from the desire to serve delicious dishes with a different sensation, Hotplate Jago presents a menu served directly on a hot plate, so it stays warm and appetizing when enjoyed.",
+        "info.sejarah.p2":"Carrying the slogan <strong>\"Hot, Delicious, Addictive\"</strong>, Hotplate Jago always strives to present dishes with fresh ingredients, delicious taste, and friendly service.",
+        "info.struktur.title":"Hotplate Jago Management","info.struktur.desc":"Hotplate Jago is managed by people who have their respective roles in carrying out daily operational activities.",
+        "info.struktur.owner":"Owner","info.struktur.kasir":"Cashier","info.struktur.koki":"Chef","info.struktur.pengadaan":"Procurement", "info.struktur.btn":"View Structure Details",
+        "contact.tag":"Visit Us","contact.title":"Location & Contact","contact.alamat.title":"Address","contact.alamat.desc":"Jl. Selokan Mataram, Santren, Caturtunggal, Kec. Depok, Sleman, DIY 55281",
+        "contact.jam.title":"Opening Hours","contact.jam.desc":"Every Day: 12.00 - 21.30 WIB<br>(Friday: 14.00 - 21.30 WIB)","contact.wa.title":"Contact",
+        "footer.brand":"Hotplate Jago","footer.desc":"Presenting a warm, delicious, and memorable hotplate culinary experience in Sleman, Yogyakarta.","footer.nav":"Navigation","footer.copyright":"All Rights Reserved."
+      }
+    };
+    let currentLang = localStorage.getItem('hotplate-lang') || 'id';
+    function applyLanguage(lang) {
+      currentLang = lang; localStorage.setItem('hotplate-lang', lang); document.documentElement.setAttribute('lang', lang);
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n'); const tr = translations[lang] && translations[lang][key]; if (tr !== undefined) el.innerHTML = tr;
       });
-    });
-
-    // --- PERBAIKAN TOTAL: MATIKAN FUNGSI KLIK PADA LOGO JIKA DI HALAMAN YANG SAMA ---
-    const logoLink = document.querySelector('.header .logo');
-    if (logoLink) {
-      logoLink.addEventListener('click', function(e) {
-        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-        const targetPath = this.getAttribute('href');
-        
-        if (currentPath === targetPath) {
-          e.preventDefault(); // Hanya batalkan refresh/redirect. Halaman akan benar-benar diam.
-        }
-      });
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
     }
-  });
+    document.addEventListener('DOMContentLoaded', () => {
+      applyLanguage(currentLang);
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', e => { e.preventDefault(); applyLanguage(btn.dataset.lang); }));
+    });
   </script>
-
 </body>
 </html>
